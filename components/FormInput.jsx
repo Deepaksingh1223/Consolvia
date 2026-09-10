@@ -4,7 +4,7 @@ import { AlertCircle } from "lucide-react";
 import { cx } from "@/lib/utils";
 
 const FIELD_CLASSES =
-  "w-full rounded-xl border bg-white px-4 py-3 text-[15px] text-body placeholder:text-muted/60 transition-colors duration-300 focus:outline-none";
+  "w-full rounded-xl border bg-white px-4 py-3 text-[15px] text-body placeholder:text-muted/60 transition-all duration-300 hover:border-ink/25 focus:outline-none";
 
 export default function FormInput({
   id,
@@ -27,7 +27,7 @@ export default function FormInput({
 
   return (
     <div>
-      <label htmlFor={id} className="block text-[13px] font-semibold text-ink">
+      <label htmlFor={id} className="block text-[13px] font-semibold tracking-[-0.005em] text-ink">
         {label}
         {required && (
           <span className="ml-1 text-brand" aria-hidden="true">
@@ -53,7 +53,7 @@ export default function FormInput({
           textarea && "resize-y",
           error
             ? "border-red-400 focus:border-red-500"
-            : "border-line focus:border-brand focus:ring-4 focus:ring-brand/10",
+            : "border-line focus:border-brand focus:bg-white focus:ring-4 focus:ring-brand/12",
         )}
         {...props}
       />

@@ -54,6 +54,12 @@ export default function ContactPage() {
         title="Talk to the Assistance Team"
         highlight="Assistance Team"
         description="Send us a message or reach us directly. For a detailed case review, use the Get Assistance form so we have your loan details in advance."
+        meta={[
+          { term: "Working Hours", detail: "Mon–Sat, 10 AM – 7 PM IST" },
+          { term: "Response", detail: "Usually within 1 working day" },
+          { term: "Email", detail: "support@consolviaprime.com" },
+          { term: "Phone", detail: "+91 00000 00000" },
+        ]}
       />
 
       <section className="section-y bg-shell">

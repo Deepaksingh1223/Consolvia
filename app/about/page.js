@@ -80,6 +80,12 @@ export default function AboutPage() {
         title="Helping Customers Navigate Loan Repayment Challenges"
         highlight="Loan Repayment Challenges"
         description="We provide assistance and guidance to borrowers facing repayment difficulty — with clear processes, documented communication and realistic expectations."
+        meta={[
+          { term: "Focus", detail: "Repayment assistance" },
+          { term: "Approach", detail: "Documented & case by case" },
+          { term: "Handling", detail: "Confidential" },
+          { term: "Outcome", detail: "Lender-dependent" },
+        ]}
       />
 
       <section className="section-y bg-white">

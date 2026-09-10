@@ -34,11 +34,16 @@ const COLUMNS = [
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-ink text-white">
+    <footer className="grain relative overflow-hidden bg-ink text-white">
       <div aria-hidden="true" className="absolute inset-0 grid-lines opacity-70" />
       <div
         aria-hidden="true"
         className="absolute -top-24 right-0 h-64 w-64 rounded-full bg-brand/15 blur-[100px]"
+        style={{ animation: "drift-b 22s ease-in-out infinite" }}
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand/60 to-transparent"
       />
 
       <div className="container-x relative py-14 md:py-16">
@@ -53,13 +58,13 @@ export default function Footer() {
             <ul className="mt-7 space-y-3 text-sm text-white/70">
               <li className="flex items-center gap-3">
                 <Phone size={15} className="text-brand" aria-hidden="true" />
-                <a href={SITE.phoneHref} className="transition-colors hover:text-white">
+                <a href={SITE.phoneHref} className="transition-colors duration-300 hover:text-brand-light">
                   {SITE.phone}
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={15} className="text-brand" aria-hidden="true" />
-                <a href={`mailto:${SITE.email}`} className="transition-colors hover:text-white">
+                <a href={`mailto:${SITE.email}`} className="transition-colors duration-300 hover:text-brand-light">
                   {SITE.email}
                 </a>
               </li>
@@ -81,9 +86,15 @@ export default function Footer() {
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="text-sm text-white/70 transition-colors duration-300 hover:text-brand-light"
+                        className="group/link inline-flex items-center gap-2 text-sm text-white/70 transition-colors duration-300 hover:text-brand-light"
                       >
-                        {link.label}
+                        <span
+                          aria-hidden="true"
+                          className="h-1 w-1 scale-0 rounded-full bg-brand transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover/link:scale-100"
+                        />
+                        <span className="transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover/link:translate-x-0.5">
+                          {link.label}
+                        </span>
                       </Link>
                     </li>
                   ))}
@@ -93,7 +104,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+        <div className="mt-14 rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition-colors duration-500 hover:border-white/20">
           <h2 className="text-[11px] font-bold uppercase tracking-[0.18em] text-white/45">
             Important Disclaimer
           </h2>
@@ -106,7 +117,7 @@ export default function Footer() {
 
         <div className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-7 text-[13px] text-white/45 sm:flex-row sm:items-center sm:justify-between">
           <p>&copy; 2026 {SITE.name}. All Rights Reserved.</p>
-          <p>{SITE.domain}</p>
+          <p className="tracking-[0.02em] text-white/40">{SITE.domain}</p>
         </div>
       </div>
     </footer>

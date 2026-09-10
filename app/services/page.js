@@ -28,18 +28,24 @@ export default function ServicesPage() {
         title="Assistance Across Every Stage of Resolution"
         highlight="Every Stage"
         description="Six focused services that cover understanding your position, representing your case and completing the formalities that follow."
+        meta={[
+          { term: "Services", detail: "Six assistance tracks" },
+          { term: "Coverage", detail: "Retail credit facilities" },
+          { term: "Delivery", detail: "Guided, step by step" },
+          { term: "Approval", detail: "Rests with your lender" },
+        ]}
       />
 
-      <section className="border-b border-line bg-white py-8">
+      <section className="sticky top-[72px] z-40 border-b border-line bg-white/90 py-5 backdrop-blur-xl">
         <div className="container-x">
           <ul className="flex flex-wrap gap-2">
             {SERVICES.map((service) => (
               <li key={service.slug}>
                 <Link
                   href={`#${service.slug}`}
-                  className="inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-[13px] font-semibold text-ink transition-colors duration-300 hover:border-brand hover:text-brand"
+                  className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-4 py-2 text-[13px] font-semibold text-ink transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-brand hover:text-brand hover:shadow-[0_10px_22px_-14px_rgba(244,123,32,0.8)]"
                 >
-                  <span className="text-[11px] font-bold text-muted">{service.number}</span>
+                  <span className="text-[11px] font-bold tabular-nums text-brand/70">{service.number}</span>
                   {service.title}
                 </Link>
               </li>

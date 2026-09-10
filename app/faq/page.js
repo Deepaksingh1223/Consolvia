@@ -27,9 +27,15 @@ export default function FaqPage() {
         title="Clear Answers, Including the Uncomfortable Ones"
         highlight="Clear Answers"
         description="What assistance covers, what it does not, and which decisions always remain with your lender."
+        meta={[
+          { term: "Topics", detail: "Seven categories" },
+          { term: "Written For", detail: "First-time enquiries" },
+          { term: "Still Unsure", detail: "Talk to the team" },
+          { term: "Promises", detail: "None — only assistance" },
+        ]}
       />
 
-      <section className="border-b border-line bg-white py-8">
+      <section className="sticky top-[72px] z-40 border-b border-line bg-white/90 py-5 backdrop-blur-xl">
         <div className="container-x">
           <nav aria-label="FAQ categories">
             <ul className="flex flex-wrap gap-2">
@@ -37,7 +43,7 @@ export default function FaqPage() {
                 <li key={group.category}>
                   <a
                     href={`#${slugify(group.category)}`}
-                    className="inline-flex rounded-full border border-line px-4 py-2 text-[13px] font-semibold text-ink transition-colors duration-300 hover:border-brand hover:text-brand"
+                    className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-4 py-2 text-[13px] font-semibold text-ink transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-brand hover:text-brand hover:shadow-[0_10px_22px_-14px_rgba(244,123,32,0.8)]"
                   >
                     {group.category}
                   </a>
@@ -48,7 +54,7 @@ export default function FaqPage() {
         </div>
       </section>
 
-      <section className="section-y bg-shell">
+      <section className="bg-shell pb-16 pt-12 md:pb-24 md:pt-14">
         <div className="container-x space-y-12">
           {FAQ_CATEGORIES.map((group) => (
             <div key={group.category} id={slugify(group.category)} className="scroll-mt-28">

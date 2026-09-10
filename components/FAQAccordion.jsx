@@ -27,11 +27,18 @@ export default function FAQAccordion({ items, className = "" }) {
                 aria-expanded={open}
                 aria-controls={panelId}
                 onClick={() => setOpenIndex(open ? null : index)}
-                className="flex w-full items-start justify-between gap-5 px-5 py-5 text-left transition-colors duration-300 hover:bg-shell md:px-6"
+                className="group/faq relative flex w-full items-start justify-between gap-5 px-5 py-5 text-left transition-colors duration-300 hover:bg-shell md:px-6"
               >
                 <span
+                  aria-hidden="true"
                   className={cx(
-                    "text-[15px] font-bold leading-snug tracking-tight transition-colors duration-300",
+                    "absolute inset-y-0 left-0 w-[3px] origin-top bg-brand transition-transform duration-400 ease-[cubic-bezier(0.16,1,0.3,1)]",
+                    open ? "scale-y-100" : "scale-y-0 group-hover/faq:scale-y-100",
+                  )}
+                />
+                <span
+                  className={cx(
+                    "text-[15px] font-bold leading-snug tracking-[-0.015em] transition-colors duration-300 group-hover/faq:text-brand",
                     open ? "text-brand" : "text-ink",
                   )}
                 >
@@ -40,10 +47,10 @@ export default function FAQAccordion({ items, className = "" }) {
                 <span
                   aria-hidden="true"
                   className={cx(
-                    "mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border transition-all duration-300",
+                    "mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)]",
                     open
                       ? "rotate-45 border-brand bg-brand text-white"
-                      : "border-line text-muted",
+                      : "border-line text-muted group-hover/faq:rotate-90 group-hover/faq:border-brand group-hover/faq:text-brand",
                   )}
                 >
                   <Plus size={15} />

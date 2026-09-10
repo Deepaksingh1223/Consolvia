@@ -301,3 +301,78 @@ body {
     transform: scaleX(1);
   }
 }
+
+/* ---------- Iteration 2: entrance stagger, hairlines, orbit ---------- */
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Page-load stagger: children animate in sequence without JS. */
+.stagger > * {
+  animation: rise-in 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.stagger > *:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.stagger > *:nth-child(2) {
+  animation-delay: 0.14s;
+}
+.stagger > *:nth-child(3) {
+  animation-delay: 0.23s;
+}
+.stagger > *:nth-child(4) {
+  animation-delay: 0.32s;
+}
+.stagger > *:nth-child(5) {
+  animation-delay: 0.41s;
+}
+
+@keyframes orbit-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-ring {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+/* Gradient hairline used to separate major bands. */
+@utility hairline {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    color-mix(in srgb, var(--color-line) 100%, transparent),
+    color-mix(in srgb, var(--color-brand) 45%, transparent),
+    color-mix(in srgb, var(--color-line) 100%, transparent),
+    transparent
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stagger > *,
+  .marquee-track {
+    animation: none !important;
+  }
+}

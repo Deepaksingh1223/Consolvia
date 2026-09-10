@@ -46,17 +46,20 @@ export default function Navbar() {
                     href={link.href}
                     aria-current={active ? "page" : undefined}
                     className={cx(
-                      "relative rounded-full px-3.5 py-2 text-[14px] font-medium transition-colors duration-300",
+                      "group/nav relative rounded-full px-3.5 py-2 text-[14px] font-medium transition-colors duration-300",
                       active ? "text-ink" : "text-muted hover:text-ink",
                     )}
                   >
                     {link.label}
-                    {active && (
-                      <span
-                        aria-hidden="true"
-                        className="absolute inset-x-3.5 -bottom-0.5 h-[2px] rounded-full bg-brand"
-                      />
-                    )}
+                    <span
+                      aria-hidden="true"
+                      className={cx(
+                        "absolute inset-x-3.5 -bottom-0.5 h-[2px] rounded-full bg-brand transition-transform duration-400 ease-[cubic-bezier(0.16,1,0.3,1)]",
+                        active
+                          ? "scale-x-100"
+                          : "origin-left scale-x-0 bg-brand/50 group-hover/nav:scale-x-100",
+                      )}
+                    />
                   </Link>
                 </li>
               );

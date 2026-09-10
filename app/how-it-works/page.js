@@ -57,6 +57,12 @@ export default function HowItWorksPage() {
         title="A Clear Five-Step Assistance Process"
         highlight="Five-Step"
         description="From your first request to the closure formalities — here is exactly what happens at each stage, and what is expected from you."
+        meta={[
+          { term: "Steps", detail: "Five defined stages" },
+          { term: "Start", detail: "A simple request form" },
+          { term: "Communication", detail: "Fully documented" },
+          { term: "Timelines", detail: "Vary by lender" },
+        ]}
       />
 
       <ProcessTimeline showHeading={false} background="white" />

@@ -43,6 +43,12 @@ export default function GetAssistancePage() {
         title="Tell Us How We Can Help"
         highlight="How We Can Help"
         description="Share a few details about your loans and current repayment position. The more accurate the information, the more useful our guidance will be."
+        meta={[
+          { term: "Time Needed", detail: "About 3 minutes" },
+          { term: "Required", detail: "Contact & loan basics" },
+          { term: "Review", detail: "Read by a person" },
+          { term: "Cost", detail: "No charge to enquire" },
+        ]}
       />
 
       <section className="section-y bg-shell">
