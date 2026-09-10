@@ -1,0 +1,73 @@
+import {
+  BadgeCheck,
+  Building2,
+  CheckCircle2,
+  ClipboardList,
+  CreditCard,
+  Eye,
+  FileInput,
+  FileWarning,
+  FolderCheck,
+  GitBranch,
+  Handshake,
+  Headset,
+  HeartHandshake,
+  Layers,
+  LifeBuoy,
+  Lock,
+  MessageSquare,
+  MessagesSquare,
+  MoreHorizontal,
+  PhoneCall,
+  PhoneOff,
+  Send,
+  ShieldCheck,
+  ShoppingBag,
+  Smartphone,
+  TrendingDown,
+  User,
+  UserCog,
+  Users,
+  Wallet,
+} from "lucide-react";
+
+const ICONS = {
+  BadgeCheck,
+  Building2,
+  CheckCircle2,
+  ClipboardList,
+  CreditCard,
+  Eye,
+  FileInput,
+  FileWarning,
+  FolderCheck,
+  GitBranch,
+  Handshake,
+  Headset,
+  HeartHandshake,
+  Layers,
+  LifeBuoy,
+  Lock,
+  MessageSquare,
+  MessagesSquare,
+  MoreHorizontal,
+  PhoneCall,
+  PhoneOff,
+  Send,
+  ShieldCheck,
+  ShoppingBag,
+  Smartphone,
+  TrendingDown,
+  User,
+  UserCog,
+  Users,
+  Wallet,
+};
+
+/** Renders a Lucide icon by name, keeping data files free of imports. */
+export default function Icon({ name, className = "", size = 20, strokeWidth = 1.75 }) {
+  const Component = ICONS[name] || ShieldCheck;
+  return (
+    <Component className={className} size={size} strokeWidth={strokeWidth} aria-hidden="true" />
+  );
+}

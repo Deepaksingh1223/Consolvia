@@ -1,0 +1,92 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { ArrowRight, Menu, X } from "lucide-react";
+import Logo from "./Logo";
+import MobileMenu from "./MobileMenu";
+import { NAV_LINKS } from "@/lib/constants";
+import { cx } from "@/lib/utils";
+
+export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <header
+      className={cx(
+        "sticky top-0 z-50 w-full border-b transition-all duration-300 ease-out",
+        scrolled || menuOpen
+          ? "border-line bg-white/85 backdrop-blur-xl"
+          : "border-transparent bg-white",
+      )}
+    >
+      <div className="container-x flex h-[72px] items-center justify-between gap-6">
+        <Link href="/" aria-label="Consolvia Prime — home" className="shrink-0">
+          <Logo />
+        </Link>
+
+        <nav aria-label="Primary navigation" className="hidden lg:block">
+          <ul className="flex items-center gap-1">
+            {NAV_LINKS.map((link) => {
+              const active =
+                link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    aria-current={active ? "page" : undefined}
+                    className={cx(
+                      "relative rounded-full px-3.5 py-2 text-[14px] font-medium transition-colors duration-300",
+                      active ? "text-ink" : "text-muted hover:text-ink",
+                    )}
+                  >
+                    {link.label}
+                    {active && (
+                      <span
+                        aria-hidden="true"
+                        className="absolute inset-x-3.5 -bottom-0.5 h-[2px] rounded-full bg-brand"
+                      />
+                    )}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+
+        <div className="flex items-center gap-2">
+          <Link
+            href="/get-assistance"
+            className="hidden items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-[14px] font-semibold text-white transition-all duration-300 ease-out hover:bg-charcoal hover:-translate-y-0.5 sm:inline-flex"
+          >
+            Get Assistance
+            <ArrowRight size={15} aria-hidden="true" />
+          </Link>
+
+          <button
+            type="button"
+            onClick={() => setMenuOpen((value) => !value)}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-line text-ink transition-colors duration-300 hover:border-ink/30 lg:hidden"
+          >
+            {menuOpen ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
+          </button>
+        </div>
+      </div>
+
+      <MobileMenu open={menuOpen} pathname={pathname} onNavigate={() => setMenuOpen(false)} />
+    </header>
+  );
+}
