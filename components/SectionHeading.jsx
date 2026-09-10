@@ -1,6 +1,7 @@
 import { cx } from "@/lib/utils";
 
 export default function SectionHeading({
+  index,
   eyebrow,
   title,
   highlight,
@@ -35,13 +36,18 @@ export default function SectionHeading({
             isDark ? "text-brand-light" : "text-brand",
           )}
         >
+          {index ? (
+            <span className="tabular-nums font-extrabold" aria-hidden="true">
+              {index}
+            </span>
+          ) : null}
           <span className="h-px w-6 bg-current" aria-hidden="true" />
           {eyebrow}
         </p>
       )}
       <Tag
         className={cx(
-          "text-3xl font-bold leading-[1.12] tracking-tight md:text-4xl lg:text-[2.75rem]",
+          "text-balance text-3xl font-bold leading-[1.1] tracking-[-0.025em] md:text-4xl lg:text-[2.75rem]",
           isDark ? "text-white" : "text-ink",
         )}
       >

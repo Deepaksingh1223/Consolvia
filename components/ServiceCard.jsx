@@ -1,35 +1,47 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import Icon from "./Icon";
+import SpotlightCard from "./SpotlightCard";
 
 export default function ServiceCard({ service }) {
   return (
-    <article className="card-base group relative flex h-full flex-col p-6 hover:-translate-y-1 hover:border-brand/40 hover:shadow-[0_24px_50px_-30px_rgba(11,11,12,0.35)] md:p-7">
-      <div className="flex items-start justify-between">
-        <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-shell text-ink transition-colors duration-300 group-hover:bg-brand group-hover:text-white">
+    <SpotlightCard
+      as="article"
+      className="card-base group relative isolate flex h-full flex-col overflow-hidden p-6 hover:-translate-y-1.5 hover:border-brand/40 hover:shadow-[0_28px_60px_-32px_rgba(11,11,12,0.4)] md:p-7"
+    >
+      <span
+        aria-hidden="true"
+        className="absolute inset-x-0 top-0 h-px origin-left scale-x-0 bg-gradient-to-r from-brand via-brand-light to-transparent transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-100"
+      />
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-2 -top-4 select-none text-[5.5rem] font-extrabold leading-none tracking-tighter text-ink/[0.035] transition-all duration-500 group-hover:text-brand/10"
+      >
+        {service.number}
+      </span>
+
+      <div className="relative flex items-start justify-between">
+        <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-shell text-ink transition-all duration-400 group-hover:-rotate-6 group-hover:bg-brand group-hover:text-white">
           <Icon name={service.icon} size={20} />
-        </span>
-        <span className="text-sm font-bold tracking-tight text-line transition-colors duration-300 group-hover:text-brand">
-          {service.number}
         </span>
       </div>
 
-      <h3 className="mt-6 text-lg font-bold leading-snug tracking-tight text-ink">
+      <h3 className="relative mt-6 text-lg font-bold leading-snug tracking-[-0.02em] text-ink">
         {service.title}
       </h3>
-      <p className="mt-3 flex-1 text-[14px] leading-relaxed text-muted">{service.short}</p>
+      <p className="relative mt-3 flex-1 text-[14px] leading-relaxed text-muted">{service.short}</p>
 
       <Link
         href={`/services#${service.slug}`}
-        className="mt-6 inline-flex items-center gap-1.5 text-[13px] font-bold text-ink transition-colors duration-300 group-hover:text-brand"
+        className="relative mt-6 inline-flex w-fit items-center gap-1.5 text-[13px] font-bold text-ink transition-colors duration-300 group-hover:text-brand"
       >
-        Learn More
+        <span className="link-draw">Learn More</span>
         <ArrowUpRight
           size={15}
           aria-hidden="true"
-          className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+          className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
         />
       </Link>
-    </article>
+    </SpotlightCard>
   );
 }

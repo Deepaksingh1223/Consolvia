@@ -4,14 +4,24 @@ import HeroVisual from "./HeroVisual";
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden border-b border-line bg-shell">
+    <section className="grain relative overflow-hidden border-b border-line bg-shell">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand/40 to-transparent"
       />
       <div
         aria-hidden="true"
-        className="absolute -left-32 top-10 h-72 w-72 rounded-full bg-brand/10 blur-[110px]"
+        className="absolute -left-32 top-10 h-72 w-72 rounded-full bg-brand/15 blur-[110px]"
+        style={{ animation: "drift-a 16s ease-in-out infinite" }}
+      />
+      <div
+        aria-hidden="true"
+        className="absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-brand-light/10 blur-[120px]"
+        style={{ animation: "drift-b 21s ease-in-out infinite" }}
+      />
+      <div
+        aria-hidden="true"
+        className="dot-grid absolute inset-y-0 left-0 w-24 opacity-40 [mask-image:linear-gradient(to_right,black,transparent)]"
       />
 
       <div className="container-x relative grid items-center gap-14 py-16 md:py-20 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:py-24">
@@ -21,8 +31,15 @@ export default function HeroSection() {
             Loan Repayment Assistance
           </span>
 
-          <h1 className="mt-6 text-[2.15rem] font-extrabold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-[3.4rem]">
-            Facing <span className="text-brand">Difficulty Repaying</span> Your Loan?
+          <h1 className="mt-6 text-balance text-[2.15rem] font-extrabold leading-[1.04] tracking-[-0.035em] text-ink sm:text-5xl lg:text-[3.5rem]">
+            Facing <span className="relative whitespace-nowrap text-brand">
+              Difficulty Repaying
+              <span
+                aria-hidden="true"
+                className="absolute -bottom-1 left-0 h-[3px] w-full origin-left bg-brand/25"
+                style={{ animation: "fade-in 1.1s ease-out 0.5s both" }}
+              />
+            </span> Your Loan?
           </h1>
 
           <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-muted md:text-lg">
@@ -47,11 +64,13 @@ export default function HeroSection() {
               { term: "Handling", detail: "Confidential" },
               { term: "Process", detail: "Fully documented" },
             ].map((item) => (
-              <div key={item.term}>
+              <div key={item.term} className="group">
                 <dt className="text-[10px] font-bold uppercase tracking-[0.16em] text-muted">
                   {item.term}
                 </dt>
-                <dd className="mt-1.5 text-sm font-bold text-ink">{item.detail}</dd>
+                <dd className="mt-1.5 text-sm font-bold tracking-[-0.01em] text-ink transition-colors duration-300 group-hover:text-brand">
+                  {item.detail}
+                </dd>
               </div>
             ))}
           </dl>

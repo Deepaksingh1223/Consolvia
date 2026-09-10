@@ -2,12 +2,20 @@ import Link from "next/link";
 import { cx } from "@/lib/utils";
 
 const BASE =
-  "inline-flex items-center justify-center gap-2 rounded-full text-sm font-semibold tracking-tight transition-all duration-300 ease-out disabled:cursor-not-allowed disabled:opacity-60";
+  "group/btn relative isolate inline-flex items-center justify-center gap-2 overflow-hidden rounded-full text-sm font-semibold tracking-tight transition-all duration-300 ease-out disabled:cursor-not-allowed disabled:opacity-60";
+
+/** Light sweep that runs across solid buttons on hover. */
+const SHEEN = (
+  <span
+    aria-hidden="true"
+    className="pointer-events-none absolute inset-y-0 -left-1/2 z-[-1] w-1/3 bg-white/25 opacity-0 group-hover/btn:opacity-100 group-hover/btn:[animation:sheen_0.9s_ease-out]"
+  />
+);
 
 const VARIANTS = {
   primary:
-    "bg-brand text-white shadow-[0_8px_24px_-10px_rgba(244,123,32,0.9)] hover:bg-brand-light hover:-translate-y-0.5",
-  dark: "bg-ink text-white hover:bg-charcoal hover:-translate-y-0.5",
+    "bg-brand text-white shadow-[0_8px_24px_-10px_rgba(244,123,32,0.9)] hover:bg-brand-light hover:-translate-y-0.5 hover:shadow-[0_16px_34px_-14px_rgba(244,123,32,0.95)]",
+  dark: "bg-ink text-white hover:bg-charcoal hover:-translate-y-0.5 hover:shadow-[0_16px_34px_-18px_rgba(11,11,12,0.9)]",
   outline:
     "border border-line bg-white text-ink hover:border-ink/30 hover:-translate-y-0.5",
   ghostLight:
@@ -31,11 +39,18 @@ export default function Button({
   ...props
 }) {
   const classes = cx(BASE, VARIANTS[variant], variant !== "link" && SIZES[size], className);
+  const solid = variant === "primary" || variant === "dark";
+  const content = (
+    <>
+      {solid && SHEEN}
+      {children}
+    </>
+  );
 
   if (as === "link" && href) {
     return (
       <Link href={href} className={classes} {...props}>
-        {children}
+        {content}
       </Link>
     );
   }
@@ -43,14 +58,14 @@ export default function Button({
   if (as === "a") {
     return (
       <a href={href} className={classes} {...props}>
-        {children}
+        {content}
       </a>
     );
   }
 
   return (
     <button className={classes} {...props}>
-      {children}
+      {content}
     </button>
   );
 }

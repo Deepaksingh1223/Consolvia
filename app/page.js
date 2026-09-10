@@ -1,5 +1,8 @@
 import HeroSection from "@/components/HeroSection";
 import TrustBar from "@/components/TrustBar";
+import Marquee from "@/components/Marquee";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import Reveal from "@/components/Reveal";
 import ProblemSection from "@/components/ProblemSection";
 import ServiceGrid from "@/components/ServiceGrid";
 import ProcessTimeline from "@/components/ProcessTimeline";
@@ -25,11 +28,13 @@ export default function HomePage() {
     <>
       <HeroSection />
       <TrustBar />
+      <Marquee />
       <ProblemSection />
       <ServiceGrid />
       <ProcessTimeline />
       <WhyChooseUs />
       <LoanTypesSection />
+      <TestimonialsSection />
       <CTASection
         title="Start With a Simple Conversation"
         description="Tell us about your situation and understand the possible next steps."
@@ -37,26 +42,37 @@ export default function HomePage() {
 
       <section className="border-t border-line bg-shell section-y">
         <div className="container-x grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
-          <div>
+          <Reveal axis="left">
             <SectionHeading
+              index="07"
               eyebrow="FAQs"
               title="Questions People Ask Us First"
               highlight="Questions"
               description="Straight answers about what assistance covers, what it does not, and what remains in your lender's hands."
             />
             <DisclaimerNote className="mt-8 bg-white" />
-          </div>
-          <FAQAccordion items={HOME_FAQS} />
+          </Reveal>
+          <Reveal delay={100}>
+            <FAQAccordion items={HOME_FAQS} />
+          </Reveal>
         </div>
       </section>
 
       <section className="bg-white py-16 md:py-20">
         <div className="container-x">
-          <div className="rounded-[1.75rem] border border-line bg-shell px-6 py-14 text-center md:px-14">
-            <h2 className="mx-auto max-w-2xl text-3xl font-bold leading-[1.14] tracking-tight text-ink md:text-[2.4rem]">
+          <Reveal
+            axis="scale"
+            className="grain relative overflow-hidden rounded-[1.75rem] border border-line bg-shell px-6 py-14 text-center md:px-14"
+          >
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-brand/10 blur-[90px]"
+              style={{ animation: "drift-a 18s ease-in-out infinite" }}
+            />
+            <h2 className="relative mx-auto max-w-2xl text-balance text-3xl font-bold leading-[1.12] tracking-[-0.03em] text-ink md:text-[2.4rem]">
               Don&apos;t Let Loan Repayment Challenges Overwhelm You.
             </h2>
-            <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+            <div className="relative mt-9 flex flex-col justify-center gap-3 sm:flex-row">
               <Button href="/get-assistance" size="lg">
                 Get Assistance
                 <ArrowRight size={17} aria-hidden="true" />
@@ -65,7 +81,7 @@ export default function HomePage() {
                 Contact Us
               </Button>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
     </>

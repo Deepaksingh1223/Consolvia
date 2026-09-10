@@ -2,6 +2,7 @@ import { Compass, Eye, HeartHandshake, Lock, ShieldCheck, Users } from "lucide-r
 import PageHero from "@/components/PageHero";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import DisclaimerNote from "@/components/DisclaimerNote";
 import { SITE } from "@/lib/constants";
 
@@ -181,6 +182,8 @@ export default function AboutPage() {
           </ul>
         </div>
       </section>
+
+      <TestimonialsSection />
 
       <CTASection
         eyebrow="Work With Us"

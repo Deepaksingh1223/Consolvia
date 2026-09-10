@@ -1,5 +1,6 @@
 import Icon from "./Icon";
 import SectionHeading from "./SectionHeading";
+import Reveal from "./Reveal";
 import { PROCESS_STEPS } from "@/lib/constants";
 import { cx } from "@/lib/utils";
 
@@ -15,20 +16,22 @@ export default function ProcessTimeline({
     <section className={cx("section-y", background === "shell" ? "bg-shell" : "bg-white")}>
       <div className="container-x">
         {showHeading && (
+          <Reveal>
           <SectionHeading
             eyebrow={eyebrow}
             title={title}
             highlight={highlight}
             description={description}
           />
+          </Reveal>
         )}
 
         {/* Desktop: horizontal timeline */}
         <ol className="mt-14 hidden lg:grid lg:grid-cols-5 lg:gap-6">
           {PROCESS_STEPS.map((step, index) => (
-            <li key={step.number} className="relative">
+            <Reveal as="li" key={step.number} delay={index * 90} className="group relative">
               <div className="flex items-center">
-                <span className="relative z-10 inline-flex h-12 w-12 items-center justify-center rounded-full border border-line bg-white text-brand shadow-[0_6px_18px_-10px_rgba(11,11,12,0.4)]">
+                <span className="relative z-10 inline-flex h-12 w-12 items-center justify-center rounded-full border border-line bg-white text-brand shadow-[0_6px_18px_-10px_rgba(11,11,12,0.4)] transition-all duration-400 group-hover:-translate-y-1 group-hover:border-brand group-hover:bg-brand group-hover:text-white">
                   <Icon name={step.icon} size={19} />
                 </span>
                 {index < PROCESS_STEPS.length - 1 && (
@@ -44,7 +47,7 @@ export default function ProcessTimeline({
               <p className="mt-2.5 pr-4 text-[13.5px] leading-relaxed text-muted">
                 {step.description}
               </p>
-            </li>
+            </Reveal>
           ))}
         </ol>
 

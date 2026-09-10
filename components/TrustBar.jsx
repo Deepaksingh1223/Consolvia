@@ -9,9 +9,9 @@ export default function TrustBar() {
           {TRUST_ITEMS.map((item) => (
             <li
               key={item.title}
-              className="flex items-center gap-3 border-b border-line px-1 py-5 md:justify-center md:border-b-0 md:px-4 md:py-6"
+              className="group flex items-center gap-3 border-b border-line px-1 py-5 transition-colors duration-300 hover:bg-shell/70 md:justify-center md:border-b-0 md:px-4 md:py-6"
             >
-              <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-shell text-brand">
+              <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-shell text-brand transition-all duration-400 group-hover:scale-110 group-hover:bg-brand group-hover:text-white">
                 <Icon name={item.icon} size={17} />
               </span>
               <span className="text-[13px] font-semibold leading-snug text-ink md:text-sm">
