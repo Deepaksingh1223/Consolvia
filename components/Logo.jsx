@@ -9,62 +9,11 @@ export default function Logo({ variant = "dark", withWordmark = true, className 
 
   return (
     <span className={`inline-flex items-center gap-2.5 ${className}`}>
-      <svg
-        viewBox="0 0 40 40"
-        width="34"
-        height="34"
-        role="img"
-        aria-label="Consolvia Prime logo"
-        fill="none"
-        className="shrink-0"
-      >
-        <rect x="0.75" y="0.75" width="38.5" height="38.5" rx="9" fill={primary} />
-        <rect
-          x="0.75"
-          y="0.75"
-          width="38.5"
-          height="38.5"
-          rx="9"
-          stroke={isLight ? "rgba(11,11,12,0.15)" : "rgba(255,255,255,0.12)"}
-          strokeWidth="1.5"
-        />
-        <rect x="9" y="11" width="4" height="18" rx="2" fill={isLight ? "#0B0B0C" : "#FFFFFF"} />
-        <rect
-          x="16"
-          y="16"
-          width="4"
-          height="13"
-          rx="2"
-          fill={isLight ? "#0B0B0C" : "#FFFFFF"}
-          opacity="0.65"
-        />
-        <rect x="23" y="21" width="4" height="8" rx="2" fill="#F47B20" />
-        <path
-          d="M22 14.5L26.5 10L31 14.5"
-          stroke="#F47B20"
-          strokeWidth="2.6"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-      {withWordmark && (
-        <span className="flex flex-col leading-none">
-          <span
-            className={`text-[15px] font-extrabold tracking-tight ${
-              isLight ? "text-white" : "text-ink"
-            }`}
-          >
-            CONSOLVIA <span className="text-brand">PRIME</span>
-          </span>
-          <span
-            className={`mt-1 text-[9px] font-semibold uppercase tracking-[0.18em] ${
-              isLight ? "text-white/50" : "text-muted"
-            }`}
-          >
-            Loan Repayment Assistance
-          </span>
-        </span>
-      )}
+      <img
+        src="/logo/logo.png"
+        alt="Consolvia Prime logo"
+        className="h-12 8 w-auto object-contain sm:h-10 md:h-12 lg:h-14"
+      />
     </span>
   );
 }
