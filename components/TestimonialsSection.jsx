@@ -10,7 +10,7 @@ export default function TestimonialsSection() {
       <div aria-hidden="true" className="absolute inset-0 grid-lines opacity-60" />
       <div
         aria-hidden="true"
-        className="absolute -left-28 top-16 h-80 w-80 rounded-full bg-brand/15 blur-[120px]"
+        className="absolute -left-28 top-16 h-80 w-80 rounded-full bg-pink/12 blur-[120px]"
         style={{ animation: "drift-b 19s ease-in-out infinite" }}
       />
 

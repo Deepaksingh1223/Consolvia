@@ -15,7 +15,7 @@ export default function CTASection({
           <div aria-hidden="true" className="absolute inset-0 grid-lines opacity-70" />
           <div
             aria-hidden="true"
-            className="absolute -bottom-24 -left-10 h-72 w-72 rounded-full bg-brand/20 blur-[100px]"
+            className="absolute -bottom-24 -left-10 h-72 w-72 rounded-full bg-blue/22 blur-[100px]"
           />
 
           <div className="relative mx-auto max-w-2xl text-center">

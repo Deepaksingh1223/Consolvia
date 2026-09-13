@@ -173,7 +173,7 @@ export default function AboutPage() {
                   key={value.title}
                   className="card-base group p-6 hover:-translate-y-1 hover:border-brand/40"
                 >
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-panel text-head transition-colors duration-300 group-hover:bg-brand group-hover:text-white">
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-panel text-head transition-colors duration-300 group-hover:bg-brand group-hover:text-base">
                     <IconComponent size={19} aria-hidden="true" />
                   </span>
                   <h3 className="mt-5 text-base font-bold tracking-tight text-head">

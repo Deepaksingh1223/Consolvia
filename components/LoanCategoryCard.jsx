@@ -5,9 +5,9 @@ export default function LoanCategoryCard({ category }) {
   return (
     <SpotlightCard
       as="div"
-      className="card-base group flex h-full items-start gap-4 overflow-hidden p-5 hover:-translate-y-1.5 hover:border-brand/40 hover:shadow-[0_22px_44px_-30px_rgba(11,11,12,0.35)] md:p-6"
+      className="card-base group flex h-full items-start gap-4 overflow-hidden p-5 hover:-translate-y-1.5 hover:border-brand/40 hover:shadow-[0_22px_44px_-30px_rgba(0,0,0,0.6)] md:p-6"
     >
-      <span className="relative inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-panel text-head transition-all duration-400 group-hover:-rotate-6 group-hover:bg-brand group-hover:text-white">
+      <span className="relative inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-panel text-head transition-all duration-400 group-hover:-rotate-6 group-hover:bg-brand group-hover:text-base">
         <Icon name={category.icon} size={18} />
       </span>
       <div className="relative">

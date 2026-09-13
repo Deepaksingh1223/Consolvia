@@ -43,7 +43,7 @@ export default function FaqPage() {
                 <li key={group.category}>
                   <a
                     href={`#${slugify(group.category)}`}
-                    className="inline-flex items-center gap-2 rounded-full border border-hair bg-elev px-4 py-2 text-[13px] font-semibold text-head transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-brand hover:text-brand hover:shadow-[0_10px_22px_-14px_rgba(244,123,32,0.8)]"
+                    className="inline-flex items-center gap-2 rounded-full border border-hair bg-elev px-4 py-2 text-[13px] font-semibold text-head transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-brand hover:text-brand hover:shadow-[0_10px_22px_-14px_rgba(0,229,255,0.75)]"
                   >
                     {group.category}
                   </a>

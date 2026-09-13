@@ -1,6 +1,6 @@
 import { ArrowRight, PhoneCall } from "lucide-react";
 import Button from "./Button";
-import HeroVisual from "./HeroVisual";
+import HeroLeadForm from "./HeroLeadForm";
 
 export default function HeroSection() {
   return (
@@ -16,7 +16,7 @@ export default function HeroSection() {
       />
       <div
         aria-hidden="true"
-        className="absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-brand-light/10 blur-[120px]"
+        className="absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-purple/18 blur-[120px]"
         style={{ animation: "drift-b 21s ease-in-out infinite" }}
       />
       <div
@@ -24,7 +24,7 @@ export default function HeroSection() {
         className="dot-grid absolute inset-y-0 left-0 w-24 opacity-40 [mask-image:linear-gradient(to_right,black,transparent)]"
       />
 
-      <div className="container-x relative grid items-center gap-14 py-16 md:py-20 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:py-24">
+      <div className="container-x relative grid items-center gap-14 py-16 md:py-20 lg:grid-cols-[1fr_minmax(0,1.02fr)] lg:gap-14 lg:py-24">
         <div className="animate-fade-up">
           <span className="inline-flex items-center gap-2 rounded-full border border-brand/30 bg-elev px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-brand">
             <span className="h-1.5 w-1.5 rounded-full bg-brand" aria-hidden="true" />
@@ -76,8 +76,8 @@ export default function HeroSection() {
           </dl>
         </div>
 
-        <div className="animate-fade-in lg:pl-4">
-          <HeroVisual />
+        <div className="animate-fade-in lg:pl-4" id="hero-form">
+          <HeroLeadForm />
         </div>
       </div>
     </section>

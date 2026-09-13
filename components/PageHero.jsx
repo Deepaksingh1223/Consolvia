@@ -22,7 +22,7 @@ export default function PageHero({ eyebrow, title, highlight, description, bread
       />
       <div
         aria-hidden="true"
-        className="absolute -left-16 bottom-0 h-64 w-64 rounded-full bg-brand-light/10 blur-[110px]"
+        className="absolute -left-16 bottom-0 h-64 w-64 rounded-full bg-purple/14 blur-[110px]"
         style={{ animation: "drift-b 24s ease-in-out infinite" }}
       />
       <div

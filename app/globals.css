@@ -1,26 +1,31 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #0b0b0c;
-  --color-charcoal: #17181a;
-  --color-charcoal-soft: #202226;
-  --color-brand: #f47b20;
-  --color-brand-light: #ff9a4a;
+  --color-ink: #050509;
+  --color-charcoal: #0f111d;
+  --color-charcoal-soft: #161a2b;
+  --color-brand: #00e5ff;
+  --color-brand-light: #5cf0ff;
+  --color-blue: #0066ff;
+  --color-purple: #8b00ff;
+  --color-pink: #ff00c8;
+  --color-warm: #ff6a00;
+  --color-highlight: #ffd600;
   --color-shell: #f7f7f5;
   --color-body: #111111;
   --color-muted: #666666;
   --color-line: #e5e4e0;
 
   /* Dark theme surfaces and text (site-wide dark mode) */
-  --color-base: #0b0b0c;
-  --color-panel: #121316;
-  --color-elev: #17181a;
-  --color-elev-2: #1e2024;
-  --color-deep: #000000;
-  --color-head: #ffffff;
-  --color-copy: #c9ccd2;
-  --color-dim: #a3a8b0;
-  --color-hair: #26282d;
+  --color-base: #050509;
+  --color-panel: #0a0b14;
+  --color-elev: #0f111d;
+  --color-elev-2: #161a2b;
+  --color-deep: #030307;
+  --color-head: #f5f7ff;
+  --color-copy: #d2d7e8;
+  --color-dim: #a7adbf;
+  --color-hair: #20263a;
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 
@@ -222,7 +227,7 @@ body {
     transition: opacity 400ms ease;
     background: radial-gradient(
       340px circle at var(--mx, 50%) var(--my, 0%),
-      rgba(244, 123, 32, 0.16),
+      rgba(0, 229, 255, 0.16),
       transparent 62%
     );
     pointer-events: none;
@@ -243,7 +248,7 @@ body {
     transition: opacity 400ms ease;
     background: radial-gradient(
       320px circle at var(--mx, 50%) var(--my, 0%),
-      rgba(255, 154, 74, 0.18),
+      rgba(139, 0, 255, 0.2),
       transparent 60%
     );
     pointer-events: none;

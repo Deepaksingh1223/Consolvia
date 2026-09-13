@@ -17,7 +17,7 @@ export default function HeroVisual() {
         className="absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-brand/12 via-transparent to-white/5 blur-2xl"
       />
 
-      <div className="relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-deep p-6 shadow-[0_40px_80px_-40px_rgba(11,11,12,0.6)] md:p-7">
+      <div className="relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-deep p-6 shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] md:p-7">
         <div aria-hidden="true" className="absolute inset-0 grid-lines opacity-80" />
         <div
           aria-hidden="true"
@@ -79,7 +79,7 @@ export default function HeroVisual() {
         </div>
       </div>
 
-      <div className="absolute -bottom-8 -left-5 hidden animate-float-slow rounded-2xl border border-hair bg-elev p-4 shadow-[0_20px_45px_-25px_rgba(11,11,12,0.35)] sm:block">
+      <div className="absolute -bottom-8 -left-5 hidden animate-float-slow rounded-2xl border border-hair bg-elev p-4 shadow-[0_20px_45px_-25px_rgba(0,0,0,0.6)] sm:block">
         <div className="flex items-center gap-3">
           <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-panel text-brand">
             <ArrowDownRight size={17} aria-hidden="true" />

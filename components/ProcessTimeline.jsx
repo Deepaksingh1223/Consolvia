@@ -31,7 +31,7 @@ export default function ProcessTimeline({
           {PROCESS_STEPS.map((step, index) => (
             <Reveal as="li" key={step.number} delay={index * 90} className="group relative">
               <div className="flex items-center">
-                <span className="relative z-10 inline-flex h-12 w-12 items-center justify-center rounded-full border border-hair bg-elev text-brand shadow-[0_6px_18px_-10px_rgba(11,11,12,0.4)] transition-all duration-400 group-hover:-translate-y-1 group-hover:border-brand group-hover:bg-brand group-hover:text-white">
+                <span className="relative z-10 inline-flex h-12 w-12 items-center justify-center rounded-full border border-hair bg-elev text-brand shadow-[0_6px_18px_-10px_rgba(0,0,0,0.6)] transition-all duration-400 group-hover:-translate-y-1 group-hover:border-brand group-hover:bg-brand group-hover:text-base">
                   <Icon name={step.icon} size={19} />
                 </span>
                 {index < PROCESS_STEPS.length - 1 && (

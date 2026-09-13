@@ -210,7 +210,7 @@ export default function AssistanceForm() {
               onChange={handleChange("consent")}
               aria-invalid={errors.consent ? "true" : "false"}
               aria-describedby={errors.consent ? "consent-error" : undefined}
-              className="mt-0.5 h-4 w-4 shrink-0 rounded border-hair accent-[#F47B20]"
+              className="mt-0.5 h-4 w-4 shrink-0 rounded border-hair accent-[#00E5FF]"
             />
             <span className="text-[13px] leading-relaxed text-dim">
               I confirm the details shared are accurate and I agree to be contacted by Consolvia

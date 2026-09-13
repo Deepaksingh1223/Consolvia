@@ -5,7 +5,7 @@
  */
 export default function Logo({ variant = "dark", withWordmark = true, className = "" }) {
   const isLight = variant === "light";
-  const primary = isLight ? "#FFFFFF" : "#0B0B0C";
+  const primary = isLight ? "#FFFFFF" : "#050509";
 
   return (
     <span className={`inline-flex items-center gap-2.5 ${className}`}>
@@ -25,23 +25,23 @@ export default function Logo({ variant = "dark", withWordmark = true, className 
           width="38.5"
           height="38.5"
           rx="9"
-          stroke={isLight ? "rgba(11,11,12,0.15)" : "rgba(255,255,255,0.12)"}
+          stroke={isLight ? "rgba(0,0,0,0.2)" : "rgba(255,255,255,0.12)"}
           strokeWidth="1.5"
         />
-        <rect x="9" y="11" width="4" height="18" rx="2" fill={isLight ? "#0B0B0C" : "#FFFFFF"} />
+        <rect x="9" y="11" width="4" height="18" rx="2" fill={isLight ? "#050509" : "#FFFFFF"} />
         <rect
           x="16"
           y="16"
           width="4"
           height="13"
           rx="2"
-          fill={isLight ? "#0B0B0C" : "#FFFFFF"}
+          fill={isLight ? "#050509" : "#FFFFFF"}
           opacity="0.65"
         />
-        <rect x="23" y="21" width="4" height="8" rx="2" fill="#F47B20" />
+        <rect x="23" y="21" width="4" height="8" rx="2" fill="#00E5FF" />
         <path
           d="M22 14.5L26.5 10L31 14.5"
-          stroke="#F47B20"
+          stroke="#00E5FF"
           strokeWidth="2.6"
           strokeLinecap="round"
           strokeLinejoin="round"

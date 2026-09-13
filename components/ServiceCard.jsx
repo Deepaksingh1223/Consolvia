@@ -7,7 +7,7 @@ export default function ServiceCard({ service }) {
   return (
     <SpotlightCard
       as="article"
-      className="card-base group relative isolate flex h-full flex-col overflow-hidden p-6 hover:-translate-y-1.5 hover:border-brand/40 hover:shadow-[0_28px_60px_-32px_rgba(11,11,12,0.4)] md:p-7"
+      className="card-base group relative isolate flex h-full flex-col overflow-hidden p-6 hover:-translate-y-1.5 hover:border-brand/40 hover:shadow-[0_28px_60px_-32px_rgba(0,0,0,0.6)] md:p-7"
     >
       <span
         aria-hidden="true"
@@ -21,7 +21,7 @@ export default function ServiceCard({ service }) {
       </span>
 
       <div className="relative flex items-start justify-between">
-        <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-panel text-head transition-all duration-400 group-hover:-rotate-6 group-hover:bg-brand group-hover:text-white">
+        <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-panel text-head transition-all duration-400 group-hover:-rotate-6 group-hover:bg-brand group-hover:text-base">
           <Icon name={service.icon} size={20} />
         </span>
       </div>

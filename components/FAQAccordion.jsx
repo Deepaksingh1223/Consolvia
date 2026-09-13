@@ -49,7 +49,7 @@ export default function FAQAccordion({ items, className = "" }) {
                   className={cx(
                     "mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)]",
                     open
-                      ? "rotate-45 border-brand bg-brand text-white"
+                      ? "rotate-45 border-brand bg-brand text-base"
                       : "border-hair text-dim group-hover/faq:rotate-90 group-hover/faq:border-brand group-hover/faq:text-brand",
                   )}
                 >

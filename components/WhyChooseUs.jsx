@@ -10,7 +10,7 @@ export default function WhyChooseUs() {
       <div aria-hidden="true" className="absolute inset-0 grid-lines opacity-70" />
       <div
         aria-hidden="true"
-        className="absolute -right-24 top-0 h-80 w-80 rounded-full bg-brand/15 blur-[110px]"
+        className="absolute -right-24 top-0 h-80 w-80 rounded-full bg-purple/14 blur-[110px]"
         style={{ animation: "drift-a 17s ease-in-out infinite" }}
       />
 

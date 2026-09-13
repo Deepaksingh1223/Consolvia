@@ -38,7 +38,7 @@ export default function Footer() {
       <div aria-hidden="true" className="absolute inset-0 grid-lines opacity-70" />
       <div
         aria-hidden="true"
-        className="absolute -top-24 right-0 h-64 w-64 rounded-full bg-brand/15 blur-[100px]"
+        className="absolute -top-24 right-0 h-64 w-64 rounded-full bg-blue/14 blur-[100px]"
         style={{ animation: "drift-b 22s ease-in-out infinite" }}
       />
       <div

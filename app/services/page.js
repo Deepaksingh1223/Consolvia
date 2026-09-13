@@ -43,7 +43,7 @@ export default function ServicesPage() {
               <li key={service.slug}>
                 <Link
                   href={`#${service.slug}`}
-                  className="inline-flex items-center gap-2 rounded-full border border-hair bg-elev px-4 py-2 text-[13px] font-semibold text-head transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-brand hover:text-brand hover:shadow-[0_10px_22px_-14px_rgba(244,123,32,0.8)]"
+                  className="inline-flex items-center gap-2 rounded-full border border-hair bg-elev px-4 py-2 text-[13px] font-semibold text-head transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-brand hover:text-brand hover:shadow-[0_10px_22px_-14px_rgba(0,229,255,0.75)]"
                 >
                   <span className="text-[11px] font-bold tabular-nums text-brand/70">{service.number}</span>
                   {service.title}
@@ -90,7 +90,7 @@ export default function ServicesPage() {
 
                 <Link
                   href="/get-assistance"
-                  className="mt-7 inline-flex items-center gap-2 rounded-full bg-brand px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-brand-light hover:-translate-y-0.5"
+                  className="mt-7 inline-flex items-center gap-2 rounded-full bg-brand px-5 py-3 text-sm font-semibold text-base transition-all duration-300 hover:bg-brand-light hover:-translate-y-0.5"
                 >
                   Request This Assistance
                   <ArrowRight size={16} aria-hidden="true" />
