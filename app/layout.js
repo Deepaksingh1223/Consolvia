@@ -28,6 +28,9 @@ export const metadata = {
     "loan documentation support",
   ],
   alternates: { canonical: "/" },
+  icons: {
+    icon: "/logo/Favicon.png",
+  },
   openGraph: {
     type: "website",
     siteName: SITE.name,

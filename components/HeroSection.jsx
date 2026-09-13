@@ -34,11 +34,7 @@ export default function HeroSection() {
           <h1 className="mt-6 text-balance text-[2.15rem] font-extrabold leading-[1.04] tracking-[-0.035em] text-head sm:text-5xl lg:text-[3.5rem]">
             Facing <span className="relative whitespace-nowrap text-brand">
               Difficulty Repaying
-              <span
-                aria-hidden="true"
-                className="absolute -bottom-1 left-0 h-[3px] w-full origin-left bg-brand/25"
-                style={{ animation: "fade-in 1.1s ease-out 0.5s both" }}
-              />
+           
             </span> Your Loan?
           </h1>
 
