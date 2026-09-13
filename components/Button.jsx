@@ -15,9 +15,9 @@ const SHEEN = (
 const VARIANTS = {
   primary:
     "bg-brand text-white shadow-[0_8px_24px_-10px_rgba(244,123,32,0.9)] hover:bg-brand-light hover:-translate-y-0.5 hover:shadow-[0_16px_34px_-14px_rgba(244,123,32,0.95)]",
-  dark: "bg-ink text-white hover:bg-charcoal hover:-translate-y-0.5 hover:shadow-[0_16px_34px_-18px_rgba(11,11,12,0.9)]",
+  dark: "bg-white text-base hover:-translate-y-0.5 hover:bg-white/90 hover:shadow-[0_16px_34px_-18px_rgba(255,255,255,0.35)]",
   outline:
-    "border border-line bg-white text-ink hover:border-ink/30 hover:-translate-y-0.5",
+    "border border-hair bg-elev text-head hover:border-white/35 hover:bg-elev-2 hover:-translate-y-0.5",
   ghostLight:
     "border border-white/25 bg-white/5 text-white hover:border-white/60 hover:bg-white/10",
   link: "text-brand hover:text-brand-light underline-offset-4 hover:underline",

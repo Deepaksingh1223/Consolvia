@@ -8,7 +8,7 @@ export default function Marquee() {
   const items = [...MARQUEE_ITEMS, ...MARQUEE_ITEMS];
 
   return (
-    <div className="relative overflow-hidden border-y border-line bg-ink py-4">
+    <div className="relative overflow-hidden border-y border-hair bg-deep py-4">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-ink to-transparent"

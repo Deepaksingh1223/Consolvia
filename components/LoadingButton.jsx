@@ -29,7 +29,7 @@ export default function LoadingButton({
         success
           ? "bg-emerald-600 text-white"
           : error
-            ? "bg-ink text-white hover:bg-charcoal"
+            ? "bg-deep text-white hover:bg-charcoal"
             : "bg-brand text-white shadow-[0_10px_28px_-12px_rgba(244,123,32,0.9)] hover:bg-brand-light hover:-translate-y-0.5",
         loading && "opacity-80",
         className,

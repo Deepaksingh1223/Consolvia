@@ -36,14 +36,14 @@ export default function ServicesPage() {
         ]}
       />
 
-      <section className="sticky top-[72px] z-40 border-b border-line bg-white/90 py-5 backdrop-blur-xl">
+      <section className="sticky top-[72px] z-40 border-b border-hair bg-base/90 py-5 backdrop-blur-xl">
         <div className="container-x">
           <ul className="flex flex-wrap gap-2">
             {SERVICES.map((service) => (
               <li key={service.slug}>
                 <Link
                   href={`#${service.slug}`}
-                  className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-4 py-2 text-[13px] font-semibold text-ink transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-brand hover:text-brand hover:shadow-[0_10px_22px_-14px_rgba(244,123,32,0.8)]"
+                  className="inline-flex items-center gap-2 rounded-full border border-hair bg-elev px-4 py-2 text-[13px] font-semibold text-head transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-brand hover:text-brand hover:shadow-[0_10px_22px_-14px_rgba(244,123,32,0.8)]"
                 >
                   <span className="text-[11px] font-bold tabular-nums text-brand/70">{service.number}</span>
                   {service.title}
@@ -54,35 +54,35 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <div className="bg-white">
+      <div className="bg-elev">
         {SERVICES.map((service, index) => (
           <section
             key={service.slug}
             id={service.slug}
-            className={`scroll-mt-24 border-b border-line py-14 md:py-20 ${
-              index % 2 === 1 ? "bg-shell" : "bg-white"
+            className={`scroll-mt-24 border-b border-hair py-14 md:py-20 ${
+              index % 2 === 1 ? "bg-panel" : "bg-elev"
             }`}
           >
             <div className="container-x grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
               <div>
                 <div className="flex items-center gap-4">
-                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-ink text-brand">
+                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-deep text-brand">
                     <Icon name={service.icon} size={21} />
                   </span>
-                  <span className="text-sm font-bold tracking-tight text-muted">
+                  <span className="text-sm font-bold tracking-tight text-dim">
                     {service.number}
                   </span>
                 </div>
 
-                <h2 className="mt-6 text-2xl font-bold leading-snug tracking-tight text-ink md:text-[2rem]">
+                <h2 className="mt-6 text-2xl font-bold leading-snug tracking-tight text-head md:text-[2rem]">
                   {service.title}
                 </h2>
-                <p className="mt-4 text-[15px] leading-relaxed text-muted md:text-base">
+                <p className="mt-4 text-[15px] leading-relaxed text-dim md:text-base">
                   {service.short}
                 </p>
 
                 {service.note && (
-                  <p className="mt-6 flex items-start gap-2.5 rounded-xl border border-brand/25 bg-brand/[0.06] p-4 text-[13px] leading-relaxed text-body/80">
+                  <p className="mt-6 flex items-start gap-2.5 rounded-xl border border-brand/25 bg-brand/[0.06] p-4 text-[13px] leading-relaxed text-copy/85">
                     <Info size={15} className="mt-0.5 shrink-0 text-brand" aria-hidden="true" />
                     {service.note}
                   </p>
@@ -98,7 +98,7 @@ export default function ServicesPage() {
               </div>
 
               <div className="grid gap-5 sm:grid-cols-2">
-                <div className="rounded-2xl border border-line bg-white p-6">
+                <div className="rounded-2xl border border-hair bg-elev p-6">
                   <h3 className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand">
                     What We Assist With
                   </h3>
@@ -110,13 +110,13 @@ export default function ServicesPage() {
                           className="mt-0.5 shrink-0 text-brand"
                           aria-hidden="true"
                         />
-                        <span className="text-[13.5px] leading-relaxed text-muted">{item}</span>
+                        <span className="text-[13.5px] leading-relaxed text-dim">{item}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="rounded-2xl border border-line bg-ink p-6">
+                <div className="rounded-2xl border border-hair bg-deep p-6">
                   <h3 className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-light">
                     Process
                   </h3>
@@ -137,7 +137,7 @@ export default function ServicesPage() {
         ))}
       </div>
 
-      <section className="bg-white pt-14">
+      <section className="bg-elev pt-14">
         <div className="container-x">
           <DisclaimerNote />
         </div>

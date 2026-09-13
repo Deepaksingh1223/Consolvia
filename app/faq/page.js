@@ -35,7 +35,7 @@ export default function FaqPage() {
         ]}
       />
 
-      <section className="sticky top-[72px] z-40 border-b border-line bg-white/90 py-5 backdrop-blur-xl">
+      <section className="sticky top-[72px] z-40 border-b border-hair bg-base/90 py-5 backdrop-blur-xl">
         <div className="container-x">
           <nav aria-label="FAQ categories">
             <ul className="flex flex-wrap gap-2">
@@ -43,7 +43,7 @@ export default function FaqPage() {
                 <li key={group.category}>
                   <a
                     href={`#${slugify(group.category)}`}
-                    className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-4 py-2 text-[13px] font-semibold text-ink transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-brand hover:text-brand hover:shadow-[0_10px_22px_-14px_rgba(244,123,32,0.8)]"
+                    className="inline-flex items-center gap-2 rounded-full border border-hair bg-elev px-4 py-2 text-[13px] font-semibold text-head transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-brand hover:text-brand hover:shadow-[0_10px_22px_-14px_rgba(244,123,32,0.8)]"
                   >
                     {group.category}
                   </a>
@@ -54,11 +54,11 @@ export default function FaqPage() {
         </div>
       </section>
 
-      <section className="bg-shell pb-16 pt-12 md:pb-24 md:pt-14">
+      <section className="bg-panel pb-16 pt-12 md:pb-24 md:pt-14">
         <div className="container-x space-y-12">
           {FAQ_CATEGORIES.map((group) => (
             <div key={group.category} id={slugify(group.category)} className="scroll-mt-28">
-              <h2 className="flex items-center gap-3 text-lg font-bold tracking-tight text-ink">
+              <h2 className="flex items-center gap-3 text-lg font-bold tracking-tight text-head">
                 <span className="h-px w-6 bg-brand" aria-hidden="true" />
                 {group.category}
               </h2>
@@ -68,7 +68,7 @@ export default function FaqPage() {
             </div>
           ))}
 
-          <DisclaimerNote className="bg-white" />
+          <DisclaimerNote className="bg-elev" />
         </div>
       </section>
 

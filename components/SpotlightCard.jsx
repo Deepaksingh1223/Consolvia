@@ -4,7 +4,7 @@ import { cx } from "@/lib/utils";
 
 /**
  * Wraps content and tracks the pointer position as CSS custom properties,
- * so the glow in `.spotlight` follows the cursor. No state, no re-renders.
+ * so the glow in `.spotlight-dark` follows the cursor. No state, no re-renders.
  */
 export default function SpotlightCard({
   children,
@@ -22,7 +22,7 @@ export default function SpotlightCard({
   return (
     <Tag
       onPointerMove={handleMove}
-      className={cx(theme === "dark" ? "spotlight-dark" : "spotlight", className)}
+      className={cx(theme === "dark" ? "spotlight-dark" : "spotlight-dark", className)}
       {...rest}
     >
       {children}

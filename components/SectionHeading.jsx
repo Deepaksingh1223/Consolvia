@@ -48,7 +48,7 @@ export default function SectionHeading({
       <Tag
         className={cx(
           "text-balance text-3xl font-bold leading-[1.1] tracking-[-0.025em] md:text-4xl lg:text-[2.75rem]",
-          isDark ? "text-white" : "text-ink",
+          isDark ? "text-white" : "text-head",
         )}
       >
         {titleText}
@@ -57,7 +57,7 @@ export default function SectionHeading({
         <p
           className={cx(
             "mt-5 text-[15px] leading-relaxed md:text-base",
-            isDark ? "text-white/65" : "text-muted",
+            isDark ? "text-white/65" : "text-dim",
           )}
         >
           {description}

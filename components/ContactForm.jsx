@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { AlertTriangle, CheckCircle2 } from "lucide-react";
+import { AlertTriangle, CheckCircle2, ShieldCheck } from "lucide-react";
 import FormInput from "./FormInput";
+import { FORM_PRIVACY_NOTE } from "@/lib/constants";
 import LoadingButton from "./LoadingButton";
 import { validateContactForm } from "@/lib/validations";
 import { submitForm } from "@/lib/utils";
@@ -120,10 +121,15 @@ export default function ContactForm() {
           }}
         />
 
+        <p className="flex items-start gap-2 text-[12.5px] leading-relaxed text-dim">
+          <ShieldCheck size={14} className="mt-0.5 shrink-0 text-brand" aria-hidden="true" />
+          {FORM_PRIVACY_NOTE}
+        </p>
+
         {status === "success" && serverMessage && (
           <p
             role="status"
-            className="flex items-start gap-2 rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-[13.5px] leading-relaxed text-emerald-800"
+            className="flex items-start gap-2 rounded-xl border border-emerald-500/30 bg-emerald-500/10 p-4 text-[13.5px] leading-relaxed text-emerald-300"
           >
             <CheckCircle2 size={16} className="mt-0.5 shrink-0" aria-hidden="true" />
             {serverMessage}
@@ -133,7 +139,7 @@ export default function ContactForm() {
         {status === "error" && serverMessage && (
           <p
             role="alert"
-            className="flex items-start gap-2 rounded-xl border border-red-200 bg-red-50 p-4 text-[13.5px] leading-relaxed text-red-700"
+            className="flex items-start gap-2 rounded-xl border border-red-500/30 bg-red-500/10 p-4 text-[13.5px] leading-relaxed text-red-300"
           >
             <AlertTriangle size={16} className="mt-0.5 shrink-0" aria-hidden="true" />
             {serverMessage}

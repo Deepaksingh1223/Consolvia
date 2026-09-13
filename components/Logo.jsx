@@ -51,14 +51,14 @@ export default function Logo({ variant = "dark", withWordmark = true, className 
         <span className="flex flex-col leading-none">
           <span
             className={`text-[15px] font-extrabold tracking-tight ${
-              isLight ? "text-white" : "text-ink"
+              isLight ? "text-white" : "text-head"
             }`}
           >
             CONSOLVIA <span className="text-brand">PRIME</span>
           </span>
           <span
             className={`mt-1 text-[9px] font-semibold uppercase tracking-[0.18em] ${
-              isLight ? "text-white/50" : "text-muted"
+              isLight ? "text-white/50" : "text-dim"
             }`}
           >
             Loan Repayment Assistance

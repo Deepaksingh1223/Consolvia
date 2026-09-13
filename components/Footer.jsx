@@ -34,7 +34,7 @@ const COLUMNS = [
 
 export default function Footer() {
   return (
-    <footer className="grain relative overflow-hidden bg-ink text-white">
+    <footer className="grain relative overflow-hidden bg-deep text-white">
       <div aria-hidden="true" className="absolute inset-0 grid-lines opacity-70" />
       <div
         aria-hidden="true"

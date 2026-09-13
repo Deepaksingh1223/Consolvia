@@ -5,7 +5,7 @@ import { SERVICES } from "@/lib/constants";
 
 export default function ServiceGrid() {
   return (
-    <section className="section-y relative bg-white">
+    <section className="section-y relative bg-elev">
       <div className="container-x">
         <Reveal>
         <SectionHeading

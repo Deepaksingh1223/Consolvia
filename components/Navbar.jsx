@@ -26,13 +26,13 @@ export default function Navbar() {
       className={cx(
         "sticky top-0 z-50 w-full border-b transition-all duration-300 ease-out",
         scrolled || menuOpen
-          ? "border-line bg-white/85 backdrop-blur-xl"
-          : "border-transparent bg-white",
+          ? "border-hair bg-base/85 backdrop-blur-xl"
+          : "border-transparent bg-elev",
       )}
     >
       <div className="container-x flex h-[72px] items-center justify-between gap-6">
         <Link href="/" aria-label="Consolvia Prime — home" className="shrink-0">
-          <Logo />
+          <Logo variant="light" />
         </Link>
 
         <nav aria-label="Primary navigation" className="hidden lg:block">
@@ -47,7 +47,7 @@ export default function Navbar() {
                     aria-current={active ? "page" : undefined}
                     className={cx(
                       "group/nav relative rounded-full px-3.5 py-2 text-[14px] font-medium transition-colors duration-300",
-                      active ? "text-ink" : "text-muted hover:text-ink",
+                      active ? "text-head" : "text-dim hover:text-head",
                     )}
                   >
                     {link.label}
@@ -70,7 +70,7 @@ export default function Navbar() {
         <div className="flex items-center gap-2">
           <Link
             href="/get-assistance"
-            className="hidden items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-[14px] font-semibold text-white transition-all duration-300 ease-out hover:bg-charcoal hover:-translate-y-0.5 sm:inline-flex"
+            className="hidden items-center gap-2 rounded-full bg-deep px-5 py-2.5 text-[14px] font-semibold text-white transition-all duration-300 ease-out hover:bg-charcoal hover:-translate-y-0.5 sm:inline-flex"
           >
             Get Assistance
             <ArrowRight size={15} aria-hidden="true" />
@@ -82,7 +82,7 @@ export default function Navbar() {
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-line text-ink transition-colors duration-300 hover:border-ink/30 lg:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-hair text-head transition-colors duration-300 hover:border-white/35 lg:hidden"
           >
             {menuOpen ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
           </button>

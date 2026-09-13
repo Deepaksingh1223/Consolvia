@@ -4,7 +4,7 @@ import HeroVisual from "./HeroVisual";
 
 export default function HeroSection() {
   return (
-    <section className="grain relative overflow-hidden border-b border-line bg-shell">
+    <section className="grain relative overflow-hidden border-b border-hair bg-panel">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand/40 to-transparent"
@@ -26,12 +26,12 @@ export default function HeroSection() {
 
       <div className="container-x relative grid items-center gap-14 py-16 md:py-20 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:py-24">
         <div className="animate-fade-up">
-          <span className="inline-flex items-center gap-2 rounded-full border border-brand/30 bg-white px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-brand">
+          <span className="inline-flex items-center gap-2 rounded-full border border-brand/30 bg-elev px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-brand">
             <span className="h-1.5 w-1.5 rounded-full bg-brand" aria-hidden="true" />
             Loan Repayment Assistance
           </span>
 
-          <h1 className="mt-6 text-balance text-[2.15rem] font-extrabold leading-[1.04] tracking-[-0.035em] text-ink sm:text-5xl lg:text-[3.5rem]">
+          <h1 className="mt-6 text-balance text-[2.15rem] font-extrabold leading-[1.04] tracking-[-0.035em] text-head sm:text-5xl lg:text-[3.5rem]">
             Facing <span className="relative whitespace-nowrap text-brand">
               Difficulty Repaying
               <span
@@ -42,7 +42,7 @@ export default function HeroSection() {
             </span> Your Loan?
           </h1>
 
-          <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-muted md:text-lg">
+          <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-dim md:text-lg">
             Get professional guidance and assistance for loan repayment challenges, lender
             communication, documentation and debt resolution.
           </p>
@@ -58,17 +58,17 @@ export default function HeroSection() {
             </Button>
           </div>
 
-          <dl className="mt-11 grid max-w-lg grid-cols-3 gap-4 border-t border-line pt-7">
+          <dl className="mt-11 grid max-w-lg grid-cols-3 gap-4 border-t border-hair pt-7">
             {[
               { term: "Approach", detail: "Case by case" },
               { term: "Handling", detail: "Confidential" },
               { term: "Process", detail: "Fully documented" },
             ].map((item) => (
               <div key={item.term} className="group">
-                <dt className="text-[10px] font-bold uppercase tracking-[0.16em] text-muted">
+                <dt className="text-[10px] font-bold uppercase tracking-[0.16em] text-dim">
                   {item.term}
                 </dt>
-                <dd className="mt-1.5 text-sm font-bold tracking-[-0.01em] text-ink transition-colors duration-300 group-hover:text-brand">
+                <dd className="mt-1.5 text-sm font-bold tracking-[-0.01em] text-head transition-colors duration-300 group-hover:text-brand">
                   {item.detail}
                 </dd>
               </div>

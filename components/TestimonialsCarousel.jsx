@@ -111,7 +111,7 @@ export default function TestimonialsCarousel({ items }) {
               onClick={() => goTo(i)}
               className={cx(
                 "h-1.5 rounded-full transition-all duration-500",
-                i === index ? "w-8 bg-brand" : "w-1.5 bg-white/25 hover:bg-white/50",
+                i === index ? "w-8 bg-brand" : "w-1.5 bg-white/25 hover:bg-white/60",
               )}
             />
           ))}

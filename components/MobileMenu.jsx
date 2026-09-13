@@ -10,7 +10,7 @@ export default function MobileMenu({ open, pathname, onNavigate }) {
     <div
       id="mobile-menu"
       className={cx(
-        "lg:hidden overflow-hidden border-t border-line bg-white transition-all duration-300 ease-out",
+        "lg:hidden overflow-hidden border-t border-hair bg-elev transition-all duration-300 ease-out",
         open ? "max-h-[520px] opacity-100" : "pointer-events-none max-h-0 opacity-0",
       )}
       aria-hidden={!open}
@@ -27,12 +27,12 @@ export default function MobileMenu({ open, pathname, onNavigate }) {
                   tabIndex={open ? 0 : -1}
                   aria-current={active ? "page" : undefined}
                   className={cx(
-                    "flex items-center justify-between border-b border-line/70 py-3.5 text-[15px] font-semibold transition-colors duration-200",
-                    active ? "text-brand" : "text-ink hover:text-brand",
+                    "flex items-center justify-between border-b border-hair py-3.5 text-[15px] font-semibold transition-colors duration-200",
+                    active ? "text-brand" : "text-head hover:text-brand",
                   )}
                 >
                   {link.label}
-                  <ArrowRight size={16} aria-hidden="true" className="text-muted" />
+                  <ArrowRight size={16} aria-hidden="true" className="text-dim" />
                 </Link>
               </li>
             );
@@ -52,7 +52,7 @@ export default function MobileMenu({ open, pathname, onNavigate }) {
           <a
             href={SITE.phoneHref}
             tabIndex={open ? 0 : -1}
-            className="inline-flex items-center justify-center gap-2 rounded-full border border-line px-5 py-3 text-sm font-semibold text-ink transition-colors duration-300 hover:border-ink/30"
+            className="inline-flex items-center justify-center gap-2 rounded-full border border-hair px-5 py-3 text-sm font-semibold text-head transition-colors duration-300 hover:border-white/35"
           >
             <Phone size={15} aria-hidden="true" />
             {SITE.phone}

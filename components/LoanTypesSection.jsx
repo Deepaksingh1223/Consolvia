@@ -5,7 +5,7 @@ import { LOAN_TYPES } from "@/lib/constants";
 
 export default function LoanTypesSection() {
   return (
-    <section className="section-y bg-white">
+    <section className="section-y bg-elev">
       <div className="container-x">
         <Reveal>
         <SectionHeading

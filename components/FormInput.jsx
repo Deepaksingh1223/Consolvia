@@ -4,7 +4,7 @@ import { AlertCircle } from "lucide-react";
 import { cx } from "@/lib/utils";
 
 const FIELD_CLASSES =
-  "w-full rounded-xl border bg-white px-4 py-3 text-[15px] text-body placeholder:text-muted/60 transition-all duration-300 hover:border-ink/25 focus:outline-none";
+  "w-full rounded-xl border bg-elev px-4 py-3 text-[15px] text-copy placeholder:text-dim/80 transition-all duration-300 hover:border-white/30 focus:outline-none";
 
 export default function FormInput({
   id,
@@ -27,14 +27,14 @@ export default function FormInput({
 
   return (
     <div>
-      <label htmlFor={id} className="block text-[13px] font-semibold tracking-[-0.005em] text-ink">
+      <label htmlFor={id} className="block text-[13px] font-semibold tracking-[-0.005em] text-head">
         {label}
         {required && (
           <span className="ml-1 text-brand" aria-hidden="true">
             *
           </span>
         )}
-        {!required && <span className="ml-1.5 text-[11px] font-medium text-muted">(optional)</span>}
+        {!required && <span className="ml-1.5 text-[11px] font-medium text-dim">(optional)</span>}
       </label>
 
       <Field
@@ -53,13 +53,13 @@ export default function FormInput({
           textarea && "resize-y",
           error
             ? "border-red-400 focus:border-red-500"
-            : "border-line focus:border-brand focus:bg-white focus:ring-4 focus:ring-brand/12",
+            : "border-hair focus:border-brand focus:bg-elev focus:ring-4 focus:ring-brand/12",
         )}
         {...props}
       />
 
       {hint && !error && (
-        <p id={`${id}-hint`} className="mt-1.5 text-[12px] text-muted">
+        <p id={`${id}-hint`} className="mt-1.5 text-[12px] text-dim">
           {hint}
         </p>
       )}
@@ -68,7 +68,7 @@ export default function FormInput({
         <p
           id={`${id}-error`}
           role="alert"
-          className="mt-1.5 flex items-center gap-1.5 text-[12.5px] font-medium text-red-600"
+          className="mt-1.5 flex items-center gap-1.5 text-[12.5px] font-medium text-red-400"
         >
           <AlertCircle size={13} aria-hidden="true" />
           {error}

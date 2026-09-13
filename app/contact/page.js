@@ -62,7 +62,7 @@ export default function ContactPage() {
         ]}
       />
 
-      <section className="section-y bg-shell">
+      <section className="section-y bg-panel">
         <div className="container-x grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-14">
           <div className="space-y-5">
             <ul className="space-y-4">
@@ -70,38 +70,38 @@ export default function ContactPage() {
                 const IconComponent = detail.icon;
                 return (
                   <li key={detail.label} className="card-base flex items-start gap-4 p-5">
-                    <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-ink text-brand">
+                    <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-deep text-brand">
                       <IconComponent size={17} aria-hidden="true" />
                     </span>
                     <div>
-                      <h2 className="text-[11px] font-bold uppercase tracking-[0.16em] text-muted">
+                      <h2 className="text-[11px] font-bold uppercase tracking-[0.16em] text-dim">
                         {detail.label}
                       </h2>
                       {detail.href ? (
                         <a
                           href={detail.href}
-                          className="mt-1.5 block text-[15px] font-bold tracking-tight text-ink transition-colors hover:text-brand"
+                          className="mt-1.5 block text-[15px] font-bold tracking-tight text-head transition-colors hover:text-brand"
                         >
                           {detail.value}
                         </a>
                       ) : (
-                        <p className="mt-1.5 text-[15px] font-bold leading-snug tracking-tight text-ink">
+                        <p className="mt-1.5 text-[15px] font-bold leading-snug tracking-tight text-head">
                           {detail.value}
                         </p>
                       )}
-                      <p className="mt-1.5 text-[12.5px] text-muted">{detail.note}</p>
+                      <p className="mt-1.5 text-[12.5px] text-dim">{detail.note}</p>
                     </div>
                   </li>
                 );
               })}
             </ul>
 
-            <DisclaimerNote className="bg-white" />
+            <DisclaimerNote className="bg-elev" />
           </div>
 
           <div>
-            <h2 className="text-xl font-bold tracking-tight text-ink">Send Us a Message</h2>
-            <p className="mt-2 text-[14px] text-muted">
+            <h2 className="text-xl font-bold tracking-tight text-head">Send Us a Message</h2>
+            <p className="mt-2 text-[14px] text-dim">
               Fields marked with an asterisk are required.
             </p>
             <div className="mt-6">

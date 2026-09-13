@@ -51,7 +51,7 @@ export default function GetAssistancePage() {
         ]}
       />
 
-      <section className="section-y bg-shell">
+      <section className="section-y bg-panel">
         <div className="container-x grid gap-10 lg:grid-cols-[1.35fr_0.65fr] lg:gap-14">
           <AssistanceForm />
 
@@ -61,21 +61,21 @@ export default function GetAssistancePage() {
                 const IconComponent = item.icon;
                 return (
                   <li key={item.title} className="card-base flex items-start gap-4 p-5">
-                    <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-ink text-brand">
+                    <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-deep text-brand">
                       <IconComponent size={17} aria-hidden="true" />
                     </span>
                     <div>
-                      <h2 className="text-[14.5px] font-bold tracking-tight text-ink">
+                      <h2 className="text-[14.5px] font-bold tracking-tight text-head">
                         {item.title}
                       </h2>
-                      <p className="mt-1.5 text-[13px] leading-relaxed text-muted">{item.text}</p>
+                      <p className="mt-1.5 text-[13px] leading-relaxed text-dim">{item.text}</p>
                     </div>
                   </li>
                 );
               })}
             </ul>
 
-            <div className="rounded-2xl border border-white/10 bg-ink p-6">
+            <div className="rounded-2xl border border-white/10 bg-deep p-6">
               <h2 className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-light">
                 Prefer to Talk?
               </h2>
@@ -96,7 +96,7 @@ export default function GetAssistancePage() {
               <p className="mt-5 text-[12.5px] leading-relaxed text-white/45">{SITE.hours}</p>
             </div>
 
-            <DisclaimerNote className="bg-white" />
+            <DisclaimerNote className="bg-elev" />
           </aside>
         </div>
       </section>

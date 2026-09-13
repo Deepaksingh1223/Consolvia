@@ -9,9 +9,9 @@ export default function CTASection({
   secondary,
 }) {
   return (
-    <section className="bg-white py-16 md:py-20">
+    <section className="bg-elev py-16 md:py-20">
       <div className="container-x">
-        <div className="relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-ink px-6 py-14 md:px-14 md:py-16">
+        <div className="relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-deep px-6 py-14 md:px-14 md:py-16">
           <div aria-hidden="true" className="absolute inset-0 grid-lines opacity-70" />
           <div
             aria-hidden="true"

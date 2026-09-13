@@ -15,14 +15,14 @@ export default function SelectInput({
 }) {
   return (
     <div>
-      <label htmlFor={id} className="block text-[13px] font-semibold text-ink">
+      <label htmlFor={id} className="block text-[13px] font-semibold text-head">
         {label}
         {required && (
           <span className="ml-1 text-brand" aria-hidden="true">
             *
           </span>
         )}
-        {!required && <span className="ml-1.5 text-[11px] font-medium text-muted">(optional)</span>}
+        {!required && <span className="ml-1.5 text-[11px] font-medium text-dim">(optional)</span>}
       </label>
 
       <div className="relative mt-2">
@@ -35,11 +35,11 @@ export default function SelectInput({
           aria-describedby={error ? `${id}-error` : undefined}
           aria-required={required}
           className={cx(
-            "w-full appearance-none rounded-xl border bg-white px-4 py-3 pr-11 text-[15px] transition-colors duration-300 focus:outline-none",
-            value ? "text-body" : "text-muted/70",
+            "w-full appearance-none rounded-xl border bg-elev px-4 py-3 pr-11 text-[15px] transition-colors duration-300 focus:outline-none",
+            value ? "text-copy" : "text-dim",
             error
               ? "border-red-400 focus:border-red-500"
-              : "border-line focus:border-brand focus:ring-4 focus:ring-brand/10",
+              : "border-hair focus:border-brand focus:ring-4 focus:ring-brand/10",
           )}
         >
           <option value="">{placeholder}</option>
@@ -52,7 +52,7 @@ export default function SelectInput({
         <ChevronDown
           size={16}
           aria-hidden="true"
-          className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-muted"
+          className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-dim"
         />
       </div>
 
@@ -60,7 +60,7 @@ export default function SelectInput({
         <p
           id={`${id}-error`}
           role="alert"
-          className="mt-1.5 flex items-center gap-1.5 text-[12.5px] font-medium text-red-600"
+          className="mt-1.5 flex items-center gap-1.5 text-[12.5px] font-medium text-red-400"
         >
           <AlertCircle size={13} aria-hidden="true" />
           {error}

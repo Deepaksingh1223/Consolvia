@@ -67,7 +67,7 @@ export default function HowItWorksPage() {
 
       <ProcessTimeline showHeading={false} background="white" />
 
-      <section className="section-y border-t border-line bg-shell">
+      <section className="section-y border-t border-hair bg-panel">
         <div className="container-x">
           <SectionHeading
             eyebrow="Stage Detail"
@@ -79,17 +79,17 @@ export default function HowItWorksPage() {
           <div className="mt-12 grid gap-5 md:grid-cols-2">
             {PROCESS_STEPS.map((step) => (
               <article key={step.number} className="card-base flex gap-5 p-6 md:p-7">
-                <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-ink text-brand">
+                <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-deep text-brand">
                   <Icon name={step.icon} size={19} />
                 </span>
                 <div>
                   <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-brand">
                     Step {step.number}
                   </p>
-                  <h3 className="mt-1.5 text-lg font-bold tracking-tight text-ink">
+                  <h3 className="mt-1.5 text-lg font-bold tracking-tight text-head">
                     {step.title}
                   </h3>
-                  <p className="mt-2.5 text-[14px] leading-relaxed text-muted">
+                  <p className="mt-2.5 text-[14px] leading-relaxed text-dim">
                     {step.description}
                   </p>
                 </div>
@@ -99,7 +99,7 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      <section className="section-y bg-white">
+      <section className="section-y bg-elev">
         <div className="container-x grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
             <SectionHeading
@@ -119,12 +119,12 @@ export default function HowItWorksPage() {
                   key={item.title}
                   className="card-base flex items-start gap-4 p-5 hover:border-brand/40"
                 >
-                  <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-shell text-brand">
+                  <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-panel text-brand">
                     <IconComponent size={18} aria-hidden="true" />
                   </span>
                   <div>
-                    <h3 className="text-[15px] font-bold tracking-tight text-ink">{item.title}</h3>
-                    <p className="mt-1.5 text-[13.5px] leading-relaxed text-muted">
+                    <h3 className="text-[15px] font-bold tracking-tight text-head">{item.title}</h3>
+                    <p className="mt-1.5 text-[13.5px] leading-relaxed text-dim">
                       {item.description}
                     </p>
                   </div>

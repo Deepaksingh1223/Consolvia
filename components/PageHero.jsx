@@ -14,7 +14,7 @@ export default function PageHero({ eyebrow, title, highlight, description, bread
     );
 
   return (
-    <section className="grain relative overflow-hidden border-b border-line bg-shell">
+    <section className="grain relative overflow-hidden border-b border-hair bg-panel">
       <div
         aria-hidden="true"
         className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-brand/15 blur-[110px]"
@@ -34,16 +34,16 @@ export default function PageHero({ eyebrow, title, highlight, description, bread
         <div className="stagger">
           {breadcrumb && (
             <nav aria-label="Breadcrumb" className="mb-7 block">
-              <ol className="flex items-center gap-1.5 text-[12px] font-medium text-muted">
+              <ol className="flex items-center gap-1.5 text-[12px] font-medium text-dim">
                 <li>
                   <Link href="/" className="transition-colors duration-300 hover:text-brand">
                     Home
                   </Link>
                 </li>
-                <li aria-hidden="true" className="flex items-center text-line">
+                <li aria-hidden="true" className="flex items-center text-white/25">
                   <ChevronRight size={13} />
                 </li>
-                <li className="font-semibold text-ink">{breadcrumb}</li>
+                <li className="font-semibold text-head">{breadcrumb}</li>
               </ol>
             </nav>
           )}
@@ -55,28 +55,28 @@ export default function PageHero({ eyebrow, title, highlight, description, bread
             </p>
           )}
 
-          <h1 className="max-w-3xl text-balance text-[2rem] font-extrabold leading-[1.06] tracking-[-0.035em] text-ink sm:text-4xl lg:text-[3rem]">
+          <h1 className="max-w-3xl text-balance text-[2rem] font-extrabold leading-[1.06] tracking-[-0.035em] text-head sm:text-4xl lg:text-[3rem]">
             {titleContent}
           </h1>
 
           {description && (
-            <p className="mt-6 max-w-2xl text-[15px] leading-relaxed text-muted md:text-lg">
+            <p className="mt-6 max-w-2xl text-[15px] leading-relaxed text-dim md:text-lg">
               {description}
             </p>
           )}
         </div>
 
         {meta?.length ? (
-          <dl className="grid gap-px overflow-hidden rounded-2xl border border-line bg-line/70 sm:grid-cols-2 lg:mb-1">
+          <dl className="grid gap-px overflow-hidden rounded-2xl border border-hair bg-hair sm:grid-cols-2 lg:mb-1">
             {meta.map((item) => (
               <div
                 key={item.term}
-                className="group bg-white/70 px-5 py-4 backdrop-blur-sm transition-colors duration-300 hover:bg-white"
+                className="group bg-elev px-5 py-4 transition-colors duration-300 hover:bg-elev-2"
               >
-                <dt className="text-[10.5px] font-bold uppercase tracking-[0.18em] text-muted">
+                <dt className="text-[10.5px] font-bold uppercase tracking-[0.18em] text-dim">
                   {item.term}
                 </dt>
-                <dd className="mt-1.5 text-[14px] font-bold tracking-[-0.01em] text-ink transition-colors duration-300 group-hover:text-brand">
+                <dd className="mt-1.5 text-[14px] font-bold tracking-[-0.01em] text-head transition-colors duration-300 group-hover:text-brand">
                   {item.detail}
                 </dd>
               </div>

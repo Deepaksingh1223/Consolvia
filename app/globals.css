@@ -11,6 +11,17 @@
   --color-muted: #666666;
   --color-line: #e5e4e0;
 
+  /* Dark theme surfaces and text (site-wide dark mode) */
+  --color-base: #0b0b0c;
+  --color-panel: #121316;
+  --color-elev: #17181a;
+  --color-elev-2: #1e2024;
+  --color-deep: #000000;
+  --color-head: #ffffff;
+  --color-copy: #c9ccd2;
+  --color-dim: #a3a8b0;
+  --color-hair: #26282d;
+
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 
   --radius-2xl: 1rem;
@@ -56,8 +67,8 @@ html {
 }
 
 body {
-  background-color: var(--color-white);
-  color: var(--color-body);
+  background-color: var(--color-base);
+  color: var(--color-copy);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
@@ -112,9 +123,9 @@ body {
 
 @utility card-base {
   border-radius: 1rem;
-  border: 1px solid var(--color-line);
-  background-color: #fff;
-  box-shadow: 0 1px 2px rgba(11, 11, 12, 0.04);
+  border: 1px solid var(--color-hair);
+  background-color: var(--color-elev);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   transition-property: all;
   transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
@@ -185,7 +196,7 @@ body {
 }
 
 @utility dot-grid {
-  background-image: radial-gradient(rgba(11, 11, 12, 0.11) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 22px 22px;
 }
 
@@ -363,9 +374,9 @@ body {
   background: linear-gradient(
     to right,
     transparent,
-    color-mix(in srgb, var(--color-line) 100%, transparent),
-    color-mix(in srgb, var(--color-brand) 45%, transparent),
-    color-mix(in srgb, var(--color-line) 100%, transparent),
+    color-mix(in srgb, var(--color-hair) 100%, transparent),
+    color-mix(in srgb, var(--color-brand) 55%, transparent),
+    color-mix(in srgb, var(--color-hair) 100%, transparent),
     transparent
   );
 }

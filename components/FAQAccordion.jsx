@@ -12,7 +12,7 @@ export default function FAQAccordion({ items, className = "" }) {
   const baseId = useId();
 
   return (
-    <div className={cx("divide-y divide-line overflow-hidden rounded-2xl border border-line bg-white", className)}>
+    <div className={cx("divide-y divide-hair overflow-hidden rounded-2xl border border-hair bg-elev", className)}>
       {items.map((item, index) => {
         const open = openIndex === index;
         const panelId = `${baseId}-panel-${index}`;
@@ -27,7 +27,7 @@ export default function FAQAccordion({ items, className = "" }) {
                 aria-expanded={open}
                 aria-controls={panelId}
                 onClick={() => setOpenIndex(open ? null : index)}
-                className="group/faq relative flex w-full items-start justify-between gap-5 px-5 py-5 text-left transition-colors duration-300 hover:bg-shell md:px-6"
+                className="group/faq relative flex w-full items-start justify-between gap-5 px-5 py-5 text-left transition-colors duration-300 hover:bg-panel md:px-6"
               >
                 <span
                   aria-hidden="true"
@@ -39,7 +39,7 @@ export default function FAQAccordion({ items, className = "" }) {
                 <span
                   className={cx(
                     "text-[15px] font-bold leading-snug tracking-[-0.015em] transition-colors duration-300 group-hover/faq:text-brand",
-                    open ? "text-brand" : "text-ink",
+                    open ? "text-brand" : "text-head",
                   )}
                 >
                   {item.q}
@@ -50,7 +50,7 @@ export default function FAQAccordion({ items, className = "" }) {
                     "mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)]",
                     open
                       ? "rotate-45 border-brand bg-brand text-white"
-                      : "border-line text-muted group-hover/faq:rotate-90 group-hover/faq:border-brand group-hover/faq:text-brand",
+                      : "border-hair text-dim group-hover/faq:rotate-90 group-hover/faq:border-brand group-hover/faq:text-brand",
                   )}
                 >
                   <Plus size={15} />
@@ -67,7 +67,7 @@ export default function FAQAccordion({ items, className = "" }) {
               )}
             >
               <div className="overflow-hidden">
-                <p className="px-5 pb-6 pr-12 text-[14.5px] leading-relaxed text-muted md:px-6">
+                <p className="px-5 pb-6 pr-12 text-[14.5px] leading-relaxed text-dim md:px-6">
                   {item.a}
                 </p>
               </div>

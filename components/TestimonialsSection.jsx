@@ -6,7 +6,7 @@ import { TESTIMONIALS, TESTIMONIAL_NOTE } from "@/lib/constants";
 
 export default function TestimonialsSection() {
   return (
-    <section className="relative overflow-hidden bg-ink">
+    <section className="relative overflow-hidden bg-deep">
       <div aria-hidden="true" className="absolute inset-0 grid-lines opacity-60" />
       <div
         aria-hidden="true"

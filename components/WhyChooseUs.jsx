@@ -6,7 +6,7 @@ import { WHY_US } from "@/lib/constants";
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative overflow-hidden bg-ink">
+    <section className="relative overflow-hidden bg-deep">
       <div aria-hidden="true" className="absolute inset-0 grid-lines opacity-70" />
       <div
         aria-hidden="true"
@@ -32,7 +32,7 @@ export default function WhyChooseUs() {
               as="li"
               theme="dark"
               key={item.title}
-              className="group relative isolate bg-ink p-6 transition-colors duration-500 hover:bg-charcoal md:p-7"
+              className="group relative isolate bg-deep p-6 transition-colors duration-500 hover:bg-charcoal md:p-7"
             >
               <span className="relative inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-brand transition-all duration-500 group-hover:-translate-y-0.5 group-hover:border-brand/50 group-hover:bg-brand/10">
                 <Icon name={item.icon} size={18} />

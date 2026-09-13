@@ -1,12 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle2, AlertTriangle } from "lucide-react";
+import { AlertTriangle, CheckCircle2, ShieldCheck } from "lucide-react";
 import FormInput from "./FormInput";
 import SelectInput from "./SelectInput";
 import LoadingButton from "./LoadingButton";
 import {
   CONTACT_METHOD_OPTIONS,
+  FORM_PRIVACY_NOTE,
   LOAN_TYPE_OPTIONS,
   REPAYMENT_STATUS_OPTIONS,
 } from "@/lib/constants";
@@ -199,7 +200,7 @@ export default function AssistanceForm() {
         <div>
           <label
             htmlFor="consent"
-            className="flex items-start gap-3 rounded-xl border border-line bg-shell p-4"
+            className="flex items-start gap-3 rounded-xl border border-hair bg-panel p-4"
           >
             <input
               id="consent"
@@ -209,9 +210,9 @@ export default function AssistanceForm() {
               onChange={handleChange("consent")}
               aria-invalid={errors.consent ? "true" : "false"}
               aria-describedby={errors.consent ? "consent-error" : undefined}
-              className="mt-0.5 h-4 w-4 shrink-0 rounded border-line accent-[#F47B20]"
+              className="mt-0.5 h-4 w-4 shrink-0 rounded border-hair accent-[#F47B20]"
             />
-            <span className="text-[13px] leading-relaxed text-muted">
+            <span className="text-[13px] leading-relaxed text-dim">
               I confirm the details shared are accurate and I agree to be contacted by Consolvia
               Prime regarding my request. I understand that any settlement, restructuring or
               repayment arrangement is subject to my lender&apos;s policies and approval.
@@ -221,7 +222,7 @@ export default function AssistanceForm() {
             <p
               id="consent-error"
               role="alert"
-              className="mt-1.5 text-[12.5px] font-medium text-red-600"
+              className="mt-1.5 text-[12.5px] font-medium text-red-400"
             >
               {errors.consent}
             </p>
@@ -231,11 +232,15 @@ export default function AssistanceForm() {
 
       <div className="mt-7 flex flex-col gap-4">
         <LoadingButton status={status} />
+        <p className="flex items-start gap-2 text-[12.5px] leading-relaxed text-dim">
+          <ShieldCheck size={14} className="mt-0.5 shrink-0 text-brand" aria-hidden="true" />
+          {FORM_PRIVACY_NOTE}
+        </p>
 
         {status === "success" && serverMessage && (
           <p
             role="status"
-            className="flex items-start gap-2 rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-[13.5px] leading-relaxed text-emerald-800"
+            className="flex items-start gap-2 rounded-xl border border-emerald-500/30 bg-emerald-500/10 p-4 text-[13.5px] leading-relaxed text-emerald-300"
           >
             <CheckCircle2 size={16} className="mt-0.5 shrink-0" aria-hidden="true" />
             {serverMessage}
@@ -245,7 +250,7 @@ export default function AssistanceForm() {
         {status === "error" && serverMessage && (
           <p
             role="alert"
-            className="flex items-start gap-2 rounded-xl border border-red-200 bg-red-50 p-4 text-[13.5px] leading-relaxed text-red-700"
+            className="flex items-start gap-2 rounded-xl border border-red-500/30 bg-red-500/10 p-4 text-[13.5px] leading-relaxed text-red-300"
           >
             <AlertTriangle size={16} className="mt-0.5 shrink-0" aria-hidden="true" />
             {serverMessage}
