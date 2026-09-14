@@ -212,7 +212,7 @@ export default function AssistanceForm() {
               aria-describedby={errors.consent ? "consent-error" : undefined}
               className="mt-0.5 h-4 w-4 shrink-0 rounded border-hair accent-[#00E5FF]"
             />
-            <span className="text-[13px] leading-relaxed text-dim">
+            <span className="text-[13px] leading-relaxed">
               I confirm the details shared are accurate and I agree to be contacted by Consolvia
               Prime regarding my request. I understand that any settlement, restructuring or
               repayment arrangement is subject to my lender&apos;s policies and approval.
@@ -232,7 +232,7 @@ export default function AssistanceForm() {
 
       <div className="mt-7 flex flex-col gap-4">
         <LoadingButton status={status} />
-        <p className="flex items-start gap-2 text-[12.5px] leading-relaxed text-dim">
+        <p className="flex items-start gap-2 text-[12.5px] leading-relaxed">
           <ShieldCheck size={14} className="mt-0.5 shrink-0 text-brand" aria-hidden="true" />
           {FORM_PRIVACY_NOTE}
         </p>

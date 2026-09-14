@@ -96,7 +96,7 @@ export default function AboutPage() {
               title="A Professional Assistance Practice, Not a Lender"
               highlight="Not a Lender"
             />
-            <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-dim">
+            <div className="mt-6 space-y-4 text-[15px] leading-relaxed">
               <p>
                 {SITE.name} is an assistance and guidance practice focused on loan repayment and
                 debt resolution matters. We work with individuals and small business borrowers who
@@ -123,7 +123,7 @@ export default function AboutPage() {
                 <Users size={18} aria-hidden="true" />
               </span>
               <h2 className="mt-5 text-xl font-bold tracking-tight text-head">Our Mission</h2>
-              <p className="mt-3 text-[14.5px] leading-relaxed text-dim">
+              <p className="mt-3 text-[14.5px] leading-relaxed">
                 To make repayment difficulty less overwhelming by giving borrowers clarity about
                 their obligations, structure in their communication and realistic guidance on the
                 resolution options that may be available to them.
@@ -149,8 +149,8 @@ export default function AboutPage() {
                 <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-brand">
                   0{index + 1}
                 </span>
-                <h3 className="mt-4 text-base font-bold tracking-tight text-head">{item.step}</h3>
-                <p className="mt-2.5 text-[14px] leading-relaxed text-dim">{item.text}</p>
+                <h3 className="mt-4  font-bold tracking-tight text-head">{item.step}</h3>
+                <p className="mt-2.5 text-[14px] leading-relaxed">{item.text}</p>
               </li>
             ))}
           </ol>
@@ -173,13 +173,13 @@ export default function AboutPage() {
                   key={value.title}
                   className="card-base group p-6 hover:-translate-y-1 hover:border-brand/40"
                 >
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-panel text-head transition-colors duration-300 group-hover:bg-brand group-hover:text-base">
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-panel text-head transition-colors duration-300 group-hover:bg-brand group-hover:">
                     <IconComponent size={19} aria-hidden="true" />
                   </span>
-                  <h3 className="mt-5 text-base font-bold tracking-tight text-head">
+                  <h3 className="mt-5  font-bold tracking-tight text-head">
                     {value.title}
                   </h3>
-                  <p className="mt-2.5 text-[14px] leading-relaxed text-dim">
+                  <p className="mt-2.5 text-[14px] leading-relaxed">
                     {value.description}
                   </p>
                 </li>

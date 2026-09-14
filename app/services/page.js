@@ -69,7 +69,7 @@ export default function ServicesPage() {
                   <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-deep text-brand">
                     <Icon name={service.icon} size={21} />
                   </span>
-                  <span className="text-sm font-bold tracking-tight text-dim">
+                  <span className="text-sm font-bold tracking-tight">
                     {service.number}
                   </span>
                 </div>
@@ -77,7 +77,7 @@ export default function ServicesPage() {
                 <h2 className="mt-6 text-2xl font-bold leading-snug tracking-tight text-head md:text-[2rem]">
                   {service.title}
                 </h2>
-                <p className="mt-4 text-[15px] leading-relaxed text-dim md:text-base">
+                <p className="mt-4 text-[15px] leading-relaxed md:">
                   {service.short}
                 </p>
 
@@ -90,7 +90,7 @@ export default function ServicesPage() {
 
                 <Link
                   href="/get-assistance"
-                  className="mt-7 inline-flex items-center gap-2 rounded-full bg-brand px-5 py-3 text-sm font-semibold text-base transition-all duration-300 hover:bg-brand-light hover:-translate-y-0.5"
+                  className="mt-7 inline-flex items-center gap-2 rounded-full bg-brand px-5 py-3 text-sm font-semibold text-black transition-all duration-300 hover:bg-brand-light hover:text-black hover:-translate-y-0.5"
                 >
                   Request This Assistance
                   <ArrowRight size={16} aria-hidden="true" />
@@ -110,7 +110,7 @@ export default function ServicesPage() {
                           className="mt-0.5 shrink-0 text-brand"
                           aria-hidden="true"
                         />
-                        <span className="text-[13.5px] leading-relaxed text-dim">{item}</span>
+                        <span className="text-[13.5px] leading-relaxed">{item}</span>
                       </li>
                     ))}
                   </ul>

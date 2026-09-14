@@ -44,7 +44,7 @@ export default function MobileMenu({ open, pathname, onNavigate }) {
             href="/get-assistance"
             onClick={onNavigate}
             tabIndex={open ? 0 : -1}
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-brand px-5 py-3 text-sm font-semibold text-base transition-colors duration-300 hover:bg-brand-light"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-brand px-5 py-3 text-sm font-semibold text-black transition-colors duration-300 hover:bg-brand-light hover:text-black"
           >
             Get Assistance
             <ArrowRight size={16} aria-hidden="true" />

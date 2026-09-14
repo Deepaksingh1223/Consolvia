@@ -34,7 +34,7 @@ export default function FormInput({
             *
           </span>
         )}
-        {!required && <span className="ml-1.5 text-[11px] font-medium text-dim">(optional)</span>}
+        {!required && <span className="ml-1.5 text-[11px] font-medium">(optional)</span>}
       </label>
 
       <Field
@@ -59,7 +59,7 @@ export default function FormInput({
       />
 
       {hint && !error && (
-        <p id={`${id}-hint`} className="mt-1.5 text-[12px] text-dim">
+        <p id={`${id}-hint`} className="mt-1.5 text-[12px]">
           {hint}
         </p>
       )}

@@ -49,8 +49,8 @@ export default function FAQAccordion({ items, className = "" }) {
                   className={cx(
                     "mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)]",
                     open
-                      ? "rotate-45 border-brand bg-brand text-base"
-                      : "border-hair text-dim group-hover/faq:rotate-90 group-hover/faq:border-brand group-hover/faq:text-brand",
+                      ? "rotate-45 border-brand bg-brand "
+                      : "border-hair group-hover/faq:rotate-90 group-hover/faq:border-brand group-hover/faq:text-brand",
                   )}
                 >
                   <Plus size={15} />
@@ -67,7 +67,7 @@ export default function FAQAccordion({ items, className = "" }) {
               )}
             >
               <div className="overflow-hidden">
-                <p className="px-5 pb-6 pr-12 text-[14.5px] leading-relaxed text-dim md:px-6">
+                <p className="px-5 pb-6 pr-12 text-[14.5px] leading-relaxed md:px-6">
                   {item.a}
                 </p>
               </div>

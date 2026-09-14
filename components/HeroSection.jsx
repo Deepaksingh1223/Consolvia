@@ -38,7 +38,7 @@ export default function HeroSection() {
             </span> Your Loan?
           </h1>
 
-          <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-dim md:text-lg">
+          <p className="mt-6 max-w-xl text-[15px] leading-relaxed md:text-lg">
             Get professional guidance and assistance for loan repayment challenges, lender
             communication, documentation and debt resolution.
           </p>
@@ -53,23 +53,7 @@ export default function HeroSection() {
               Talk to an Expert
             </Button>
           </div>
-
-          <dl className="mt-11 grid max-w-lg grid-cols-3 gap-4 border-t border-hair pt-7">
-            {[
-              { term: "Approach", detail: "Case by case" },
-              { term: "Handling", detail: "Confidential" },
-              { term: "Process", detail: "Fully documented" },
-            ].map((item) => (
-              <div key={item.term} className="group">
-                <dt className="text-[10px] font-bold uppercase tracking-[0.16em] text-dim">
-                  {item.term}
-                </dt>
-                <dd className="mt-1.5 text-sm font-bold tracking-[-0.01em] text-head transition-colors duration-300 group-hover:text-brand">
-                  {item.detail}
-                </dd>
-              </div>
-            ))}
-          </dl>
+ 
         </div>
 
         <div className="animate-fade-in lg:pl-4" id="hero-form">

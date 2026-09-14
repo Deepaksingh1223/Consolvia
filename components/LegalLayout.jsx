@@ -25,12 +25,12 @@ export default function LegalLayout({
         <div className="container-x grid gap-12 lg:grid-cols-[0.32fr_0.68fr] lg:gap-14">
           <aside className="lg:sticky lg:top-28 lg:self-start">
             <div className="rounded-2xl border border-hair bg-panel p-6">
-              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-dim">
+              <p className="text-[11px] font-bold uppercase tracking-[0.18em]">
                 Last updated
               </p>
               <p className="mt-2 text-[14px] font-semibold text-head">{updated}</p>
 
-              <h2 className="mt-7 text-[11px] font-bold uppercase tracking-[0.18em] text-dim">
+              <h2 className="mt-7 text-[11px] font-bold uppercase tracking-[0.18em]">
                 On this page
               </h2>
               <nav aria-label="Section navigation" className="mt-4">
@@ -39,7 +39,7 @@ export default function LegalLayout({
                     <li key={section.heading}>
                       <a
                         href={`#${slugify(section.heading)}`}
-                        className="text-[13px] font-medium text-dim transition-colors duration-300 hover:text-brand"
+                        className="text-[13px] font-medium transition-colors duration-300 hover:text-brand"
                       >
                         {section.heading}
                       </a>
@@ -88,7 +88,7 @@ export default function LegalLayout({
                 </h2>
 
                 {section.paragraphs?.map((paragraph) => (
-                  <p key={paragraph} className="mt-4 text-[14.5px] leading-relaxed text-dim">
+                  <p key={paragraph} className="mt-4 text-[14.5px] leading-relaxed">
                     {paragraph}
                   </p>
                 ))}
@@ -96,7 +96,7 @@ export default function LegalLayout({
                 {section.list && (
                   <ul className="mt-5 space-y-2.5">
                     {section.list.map((item) => (
-                      <li key={item} className="flex gap-3 text-[14.5px] leading-relaxed text-dim">
+                      <li key={item} className="flex gap-3 text-[14.5px] leading-relaxed">
                         <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" aria-hidden="true" />
                         {item}
                       </li>
@@ -106,7 +106,7 @@ export default function LegalLayout({
               </section>
             ))}
 
-            <p className="mt-10 rounded-2xl border border-hair bg-panel p-5 text-[13px] leading-relaxed text-dim">
+            <p className="mt-10 rounded-2xl border border-hair bg-panel p-5 text-[13px] leading-relaxed">
               Questions about this page can be sent to{" "}
               <a href={`mailto:${SITE.email}`} className="font-semibold text-head hover:text-brand">
                 {SITE.email}

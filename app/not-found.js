@@ -14,7 +14,7 @@ export default function NotFound() {
         <h1 className="mt-5 text-3xl font-extrabold tracking-tight text-head md:text-[2.6rem]">
           This Page Could Not Be Found
         </h1>
-        <p className="mt-5 max-w-md text-[15px] leading-relaxed text-dim">
+        <p className="mt-5 max-w-md text-[15px] leading-relaxed">
           The page you were looking for may have been moved or renamed. You can return home or
           submit an assistance request.
         </p>

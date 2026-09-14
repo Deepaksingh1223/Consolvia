@@ -31,7 +31,7 @@ export default function ProcessTimeline({
           {PROCESS_STEPS.map((step, index) => (
             <Reveal as="li" key={step.number} delay={index * 90} className="group relative">
               <div className="flex items-center">
-                <span className="relative z-10 inline-flex h-12 w-12 items-center justify-center rounded-full border border-hair bg-elev text-brand shadow-[0_6px_18px_-10px_rgba(0,0,0,0.6)] transition-all duration-400 group-hover:-translate-y-1 group-hover:border-brand group-hover:bg-brand group-hover:text-base">
+                <span className="relative z-10 inline-flex h-12 w-12 items-center justify-center rounded-full border border-hair bg-elev text-brand shadow-[0_6px_18px_-10px_rgba(0,0,0,0.6)] transition-all duration-400 group-hover:-translate-y-1 group-hover:border-brand group-hover:bg-brand group-hover:">
                   <Icon name={step.icon} size={19} />
                 </span>
                 {index < PROCESS_STEPS.length - 1 && (
@@ -41,10 +41,10 @@ export default function ProcessTimeline({
               <p className="mt-6 text-[11px] font-bold uppercase tracking-[0.2em] text-brand">
                 Step {step.number}
               </p>
-              <h3 className="mt-2 text-base font-bold leading-snug tracking-tight text-head">
+              <h3 className="mt-2  font-bold leading-snug tracking-tight text-head">
                 {step.title}
               </h3>
-              <p className="mt-2.5 pr-4 text-[13.5px] leading-relaxed text-dim">
+              <p className="mt-2.5 pr-4 text-[13.5px] leading-relaxed">
                 {step.description}
               </p>
             </Reveal>
@@ -67,10 +67,10 @@ export default function ProcessTimeline({
                 <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-brand">
                   Step {step.number}
                 </p>
-                <h3 className="mt-1.5 text-base font-bold tracking-tight text-head">
+                <h3 className="mt-1.5  font-bold tracking-tight text-head">
                   {step.title}
                 </h3>
-                <p className="mt-2 text-[14px] leading-relaxed text-dim">{step.description}</p>
+                <p className="mt-2 text-[14px] leading-relaxed">{step.description}</p>
               </div>
             </li>
           ))}

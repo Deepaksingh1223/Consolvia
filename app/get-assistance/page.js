@@ -68,7 +68,7 @@ export default function GetAssistancePage() {
                       <h2 className="text-[14.5px] font-bold tracking-tight text-head">
                         {item.title}
                       </h2>
-                      <p className="mt-1.5 text-[13px] leading-relaxed text-dim">{item.text}</p>
+                      <p className="mt-1.5 text-[13px] leading-relaxed">{item.text}</p>
                     </div>
                   </li>
                 );

@@ -25,7 +25,7 @@ export default function CTASection({
             <h2 className="mt-5 text-3xl font-bold leading-[1.12] tracking-tight text-white md:text-[2.6rem]">
               {title}
             </h2>
-            <p className="mt-5 text-[15px] leading-relaxed text-white/60 md:text-base">
+            <p className="mt-5 text-[15px] leading-relaxed text-white/60 md:">
               {description}
             </p>
 

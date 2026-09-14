@@ -89,7 +89,7 @@ export default function HowItWorksPage() {
                   <h3 className="mt-1.5 text-lg font-bold tracking-tight text-head">
                     {step.title}
                   </h3>
-                  <p className="mt-2.5 text-[14px] leading-relaxed text-dim">
+                  <p className="mt-2.5 text-[14px] leading-relaxed">
                     {step.description}
                   </p>
                 </div>
@@ -124,7 +124,7 @@ export default function HowItWorksPage() {
                   </span>
                   <div>
                     <h3 className="text-[15px] font-bold tracking-tight text-head">{item.title}</h3>
-                    <p className="mt-1.5 text-[13.5px] leading-relaxed text-dim">
+                    <p className="mt-1.5 text-[13.5px] leading-relaxed">
                       {item.description}
                     </p>
                   </div>

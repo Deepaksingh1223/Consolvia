@@ -22,7 +22,7 @@ export default function SelectInput({
             *
           </span>
         )}
-        {!required && <span className="ml-1.5 text-[11px] font-medium text-dim">(optional)</span>}
+        {!required && <span className="ml-1.5 text-[11px] font-medium">(optional)</span>}
       </label>
 
       <div className="relative mt-2">
@@ -52,7 +52,7 @@ export default function SelectInput({
         <ChevronDown
           size={16}
           aria-hidden="true"
-          className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-dim"
+          className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2"
         />
       </div>
 
