@@ -34,7 +34,7 @@ export default function PageHero({ eyebrow, title, highlight, description, bread
         <div className="stagger">
           {breadcrumb && (
             <nav aria-label="Breadcrumb" className="mb-7 block">
-              <ol className="flex items-center gap-1.5 text-[12px] font-medium text-dim">
+              <ol className="flex items-center gap-1.5 text-[12px] font-medium">
                 <li>
                   <Link href="/" className="transition-colors duration-300 hover:text-brand">
                     Home
@@ -60,7 +60,7 @@ export default function PageHero({ eyebrow, title, highlight, description, bread
           </h1>
 
           {description && (
-            <p className="mt-6 max-w-2xl text-[15px] leading-relaxed text-dim md:text-lg">
+            <p className="mt-6 max-w-2xl text-[15px] leading-relaxed md:text-lg">
               {description}
             </p>
           )}
@@ -73,7 +73,7 @@ export default function PageHero({ eyebrow, title, highlight, description, bread
                 key={item.term}
                 className="group bg-elev px-5 py-4 transition-colors duration-300 hover:bg-elev-2"
               >
-                <dt className="text-[10.5px] font-bold uppercase tracking-[0.18em] text-dim">
+                <dt className="text-[10.5px] font-bold uppercase tracking-[0.18em]">
                   {item.term}
                 </dt>
                 <dd className="mt-1.5 text-[14px] font-bold tracking-[-0.01em] text-head transition-colors duration-300 group-hover:text-brand">

@@ -84,12 +84,12 @@ export default function HeroLeadForm() {
         <h2 className="mt-4 text-balance text-[1.35rem] font-extrabold leading-[1.2] tracking-[-0.025em] text-head md:text-[1.6rem]">
           {HERO_FORM.title}
         </h2>
-        <p className="mt-3 text-[13.5px] leading-relaxed text-dim">{HERO_FORM.subtitle}</p>
+        <p className="mt-3 text-[13.5px] leading-relaxed">{HERO_FORM.subtitle}</p>
 
         <div className="mt-7 grid gap-5">
           <FormInput
             id="heroFullName"
-            label="Full Name"
+            label="Name"
             value={values.fullName}
             onChange={handleChange("fullName")}
             error={errors.fullName}
@@ -101,7 +101,7 @@ export default function HeroLeadForm() {
           <div className="grid gap-5 sm:grid-cols-2">
             <FormInput
               id="heroPhone"
-              label="Phone Number"
+              label="Phone"
               type="tel"
               value={values.phone}
               onChange={handleChange("phone")}
@@ -113,7 +113,7 @@ export default function HeroLeadForm() {
             />
             <FormInput
               id="heroEmail"
-              label="Email Address"
+              label="Email"
               type="email"
               value={values.email}
               onChange={handleChange("email")}
@@ -124,10 +124,10 @@ export default function HeroLeadForm() {
             />
           </div>
 
-          <div className="grid gap-5 sm:grid-cols-2">
+          <div className="gap-5 sm:grid-cols-2">
             <SelectInput
               id="heroDebtType"
-              label="Debt Type"
+              label="Type of Debt"
               value={values.debtType}
               onChange={handleChange("debtType")}
               options={DEBT_TYPE_OPTIONS}
@@ -135,21 +135,13 @@ export default function HeroLeadForm() {
               error={errors.debtType}
               required
             />
-            <SelectInput
-              id="heroPreferredTime"
-              label="Preferred Contact Time"
-              value={values.preferredTime}
-              onChange={handleChange("preferredTime")}
-              options={CONTACT_TIME_OPTIONS}
-              placeholder="Select a time"
-            />
           </div>
         </div>
 
         <button
           type="submit"
           disabled={status === "loading"}
-          className="group/btn relative mt-7 inline-flex w-full items-center justify-center gap-2 overflow-hidden rounded-full bg-brand px-6 py-3.5 text-[15px] font-bold tracking-tight text-base transition-all duration-300 hover:bg-brand-light hover:shadow-[0_16px_34px_-14px_rgba(0,229,255,0.9)] disabled:cursor-not-allowed disabled:opacity-70"
+          className="group/btn relative mt-7 inline-flex w-full items-center justify-center gap-2 overflow-hidden rounded-full bg-brand px-6 py-3.5 text-[15px] font-bold tracking-tight !text-black transition-all duration-300 hover:bg-brand-light hover:!text-black hover:shadow-[0_16px_34px_-14px_rgba(0,229,255,0.9)] disabled:cursor-not-allowed disabled:opacity-70"
         >
           {status === "loading" ? (
             <>
@@ -188,7 +180,7 @@ export default function HeroLeadForm() {
           </p>
         )}
 
-        <p className="mt-4 flex items-start gap-2 text-[12px] leading-relaxed text-dim">
+        <p className="mt-4 flex items-start gap-2 text-[12px] leading-relaxed">
           <ShieldCheck size={13} className="mt-0.5 shrink-0 text-brand" aria-hidden="true" />
           {FORM_PRIVACY_NOTE}
         </p>

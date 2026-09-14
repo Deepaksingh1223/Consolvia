@@ -37,7 +37,7 @@ export default function WhyChooseUs() {
               <span className="relative inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-brand transition-all duration-500 group-hover:-translate-y-0.5 group-hover:border-brand/50 group-hover:bg-brand/10">
                 <Icon name={item.icon} size={18} />
               </span>
-              <h3 className="relative mt-5 text-base font-bold tracking-[-0.015em] text-white">{item.title}</h3>
+              <h3 className="relative mt-5  font-bold tracking-[-0.015em] text-white">{item.title}</h3>
               <p className="relative mt-2.5 text-[14px] leading-relaxed text-white/55">
                 {item.description}
               </p>

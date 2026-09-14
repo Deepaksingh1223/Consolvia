@@ -121,7 +121,7 @@ export default function ContactForm() {
           }}
         />
 
-        <p className="flex items-start gap-2 text-[12.5px] leading-relaxed text-dim">
+        <p className="flex items-start gap-2 text-[12.5px] leading-relaxed">
           <ShieldCheck size={14} className="mt-0.5 shrink-0 text-brand" aria-hidden="true" />
           {FORM_PRIVACY_NOTE}
         </p>

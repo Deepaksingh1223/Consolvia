@@ -30,13 +30,16 @@ export default function Navbar() {
           : "border-transparent bg-elev",
       )}
     >
-      <div className="container-x flex h-[72px] items-center justify-between gap-6">
+      <div className="container-x flex h-[72px] items-center gap-4 lg:gap-5">
         <Link href="/" aria-label="Consolvia Prime — home" className="shrink-0">
           <Logo variant="light" />
         </Link>
 
-        <nav aria-label="Primary navigation" className="hidden lg:block">
-          <ul className="flex items-center gap-1">
+        <nav
+          aria-label="Primary navigation"
+          className="hidden min-w-0 flex-1 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:block"
+        >
+          <ul className="flex w-max min-w-full items-center justify-end gap-0.5">
             {NAV_LINKS.map((link) => {
               const active =
                 link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
@@ -46,7 +49,7 @@ export default function Navbar() {
                     href={link.href}
                     aria-current={active ? "page" : undefined}
                     className={cx(
-                      "group/nav relative rounded-full px-3.5 py-2 text-[14px] font-medium transition-colors duration-300",
+                      "group/nav relative whitespace-nowrap rounded-full px-2.5 py-2 text-[12px] font-medium transition-colors duration-300 xl:px-3 xl:text-[13px]",
                       active ? "text-head" : "text-dim hover:text-head",
                     )}
                   >
@@ -54,7 +57,7 @@ export default function Navbar() {
                     <span
                       aria-hidden="true"
                       className={cx(
-                        "absolute inset-x-3.5 -bottom-0.5 h-[2px] rounded-full bg-brand transition-transform duration-400 ease-[cubic-bezier(0.16,1,0.3,1)]",
+                        "absolute inset-x-2.5 -bottom-0.5 h-[2px] rounded-full bg-brand transition-transform duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] xl:inset-x-3",
                         active
                           ? "scale-x-100"
                           : "origin-left scale-x-0 bg-brand/50 group-hover/nav:scale-x-100",
@@ -67,7 +70,7 @@ export default function Navbar() {
           </ul>
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="ml-auto flex shrink-0 items-center gap-2 lg:ml-0">
           <Link
             href="/get-assistance"
             className="hidden items-center gap-2 rounded-full bg-deep px-5 py-2.5 text-[14px] font-semibold text-white transition-all duration-300 ease-out hover:bg-charcoal hover:-translate-y-0.5 sm:inline-flex"

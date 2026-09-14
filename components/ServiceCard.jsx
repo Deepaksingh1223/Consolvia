@@ -21,7 +21,7 @@ export default function ServiceCard({ service }) {
       </span>
 
       <div className="relative flex items-start justify-between">
-        <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-panel text-head transition-all duration-400 group-hover:-rotate-6 group-hover:bg-brand group-hover:text-base">
+        <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-panel text-head transition-all duration-400 group-hover:-rotate-6 group-hover:bg-brand group-hover:">
           <Icon name={service.icon} size={20} />
         </span>
       </div>
@@ -29,7 +29,7 @@ export default function ServiceCard({ service }) {
       <h3 className="relative mt-6 text-lg font-bold leading-snug tracking-[-0.02em] text-head">
         {service.title}
       </h3>
-      <p className="relative mt-3 flex-1 text-[14px] leading-relaxed text-dim">{service.short}</p>
+      <p className="relative mt-3 flex-1 text-[14px] leading-relaxed">{service.short}</p>
 
       <Link
         href={`/services#${service.slug}`}

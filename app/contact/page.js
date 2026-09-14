@@ -74,7 +74,7 @@ export default function ContactPage() {
                       <IconComponent size={17} aria-hidden="true" />
                     </span>
                     <div>
-                      <h2 className="text-[11px] font-bold uppercase tracking-[0.16em] text-dim">
+                      <h2 className="text-[11px] font-bold uppercase tracking-[0.16em]">
                         {detail.label}
                       </h2>
                       {detail.href ? (
@@ -89,7 +89,7 @@ export default function ContactPage() {
                           {detail.value}
                         </p>
                       )}
-                      <p className="mt-1.5 text-[12.5px] text-dim">{detail.note}</p>
+                      <p className="mt-1.5 text-[12.5px]">{detail.note}</p>
                     </div>
                   </li>
                 );
@@ -101,7 +101,7 @@ export default function ContactPage() {
 
           <div>
             <h2 className="text-xl font-bold tracking-tight text-head">Send Us a Message</h2>
-            <p className="mt-2 text-[14px] text-dim">
+            <p className="mt-2 text-[14px]">
               Fields marked with an asterisk are required.
             </p>
             <div className="mt-6">

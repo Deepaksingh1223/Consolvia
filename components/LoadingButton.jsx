@@ -30,7 +30,7 @@ export default function LoadingButton({
           ? "bg-emerald-600 text-white"
           : error
             ? "bg-deep text-white hover:bg-charcoal"
-            : "bg-brand text-base shadow-[0_10px_28px_-12px_rgba(0,229,255,0.85)] hover:bg-brand-light hover:-translate-y-0.5",
+            : "bg-brand text-black shadow-[0_10px_28px_-12px_rgba(0,229,255,0.85)] hover:bg-brand-light hover:text-black hover:-translate-y-0.5",
         loading && "opacity-80",
         className,
       )}

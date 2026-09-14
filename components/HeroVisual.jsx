@@ -62,14 +62,14 @@ export default function HeroVisual() {
               <p className="mt-3 text-[11px] uppercase tracking-[0.14em] text-white/40">
                 Documents
               </p>
-              <p className="mt-1 text-base font-bold text-white">Organised</p>
+              <p className="mt-1  font-bold text-white">Organised</p>
             </div>
             <div className="rounded-xl border border-white/10 bg-white/[0.04] p-4">
               <ShieldCheck size={16} className="text-brand" aria-hidden="true" />
               <p className="mt-3 text-[11px] uppercase tracking-[0.14em] text-white/40">
                 Handling
               </p>
-              <p className="mt-1 text-base font-bold text-white">Confidential</p>
+              <p className="mt-1  font-bold text-white">Confidential</p>
             </div>
           </div>
 
@@ -85,7 +85,7 @@ export default function HeroVisual() {
             <ArrowDownRight size={17} aria-hidden="true" />
           </span>
           <div>
-            <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-dim">
+            <p className="text-[10px] font-bold uppercase tracking-[0.16em]">
               Structured
             </p>
             <p className="text-sm font-bold text-head">Repayment Plan</p>

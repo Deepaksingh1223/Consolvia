@@ -56,8 +56,8 @@ export default function SectionHeading({
       {description && (
         <p
           className={cx(
-            "mt-5 text-[15px] leading-relaxed md:text-base",
-            isDark ? "text-white/65" : "text-dim",
+            "mt-5 text-[15px] leading-relaxed md:",
+           
           )}
         >
           {description}
