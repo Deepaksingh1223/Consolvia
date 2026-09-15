@@ -1,26 +1,49 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowRight, Phone } from "lucide-react";
 import { NAV_LINKS, SITE } from "@/lib/constants";
 import { cx } from "@/lib/utils";
 
 export default function MobileMenu({ open, pathname, onNavigate }) {
+  const [hash, setHash] = useState("");
+
+  useEffect(() => {
+    const updateHash = () => setHash(window.location.hash);
+    updateHash();
+    window.addEventListener("hashchange", updateHash);
+    return () => window.removeEventListener("hashchange", updateHash);
+  }, []);
+
   return (
     <div
       id="mobile-menu"
       className={cx(
-        "lg:hidden overflow-hidden border-t border-hair bg-elev transition-all duration-300 ease-out",
-        open ? "max-h-[520px] opacity-100" : "pointer-events-none max-h-0 opacity-0",
+        "lg:hidden overflow-y-auto border-t border-hair bg-elev transition-all duration-300 ease-out",
+        open
+          ? "max-h-[calc(100dvh-72px)] opacity-100"
+          : "pointer-events-none max-h-0 overflow-hidden opacity-0",
       )}
       aria-hidden={!open}
     >
       <nav aria-label="Mobile navigation" className="container-x py-5">
         <ul className="flex flex-col">
           {NAV_LINKS.map((link) => {
-            const active = pathname === link.href;
+            const [linkPath, linkHash] = link.href.split("#");
+            const matchingRouteIndex = NAV_LINKS.findIndex((candidate) => {
+              const [candidatePath, candidateHash] = candidate.href.split("#");
+              return !candidateHash && candidatePath === linkPath;
+            });
+            const routeMatch =
+              linkPath === "/"
+                ? pathname === "/" && !hash
+                : pathname === linkPath || pathname.startsWith(`${linkPath}/`);
+            const active = linkHash
+              ? pathname === linkPath && hash === `#${linkHash}`
+              : routeMatch && NAV_LINKS.indexOf(link) === matchingRouteIndex;
             return (
-              <li key={link.href}>
+              <li key={`${link.href}-${link.label}`}>
                 <Link
                   href={link.href}
                   onClick={onNavigate}
