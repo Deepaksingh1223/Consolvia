@@ -40,11 +40,12 @@ export default function Navbar() {
           className="hidden min-w-0 flex-1 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:block"
         >
           <ul className="flex w-max min-w-full items-center justify-end gap-0.5">
-            {NAV_LINKS.map((link) => {
+            {NAV_LINKS.map((link, index) => {
               const active =
-                link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
+                (link.href === "/" ? pathname === "/" : pathname.startsWith(link.href)) &&
+                NAV_LINKS.findIndex((candidate) => candidate.href === link.href) === index;
               return (
-                <li key={link.href}>
+                <li key={`${link.href}-${link.label}`}>
                   <Link
                     href={link.href}
                     aria-current={active ? "page" : undefined}
