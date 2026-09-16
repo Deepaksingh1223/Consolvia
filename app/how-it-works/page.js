@@ -52,8 +52,8 @@ export default function HowItWorksPage() {
   return (
     <>
       <PageHero
-        breadcrumb="How It Works"
-        eyebrow="The Process"
+        breadcrumb="Process & Pricing"
+        eyebrow="Process & Pricing"
         title="A Clear Five-Step Assistance Process"
         highlight="Five-Step"
         description="From your first request to the closure formalities — here is exactly what happens at each stage, and what is expected from you."

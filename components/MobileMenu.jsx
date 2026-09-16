@@ -2,12 +2,13 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, ChevronDown, Phone } from "lucide-react";
 import { NAV_LINKS, SITE } from "@/lib/constants";
 import { cx } from "@/lib/utils";
 
 export default function MobileMenu({ open, pathname, onNavigate }) {
   const [hash, setHash] = useState("");
+  const [aboutOpen, setAboutOpen] = useState(false);
 
   useEffect(() => {
     const updateHash = () => setHash(window.location.hash);
@@ -31,32 +32,63 @@ export default function MobileMenu({ open, pathname, onNavigate }) {
         <ul className="flex flex-col">
           {NAV_LINKS.map((link) => {
             const [linkPath, linkHash] = link.href.split("#");
-            const matchingRouteIndex = NAV_LINKS.findIndex((candidate) => {
-              const [candidatePath, candidateHash] = candidate.href.split("#");
-              return !candidateHash && candidatePath === linkPath;
-            });
             const routeMatch =
               linkPath === "/"
                 ? pathname === "/" && !hash
                 : pathname === linkPath || pathname.startsWith(`${linkPath}/`);
             const active = linkHash
               ? pathname === linkPath && hash === `#${linkHash}`
-              : routeMatch && NAV_LINKS.indexOf(link) === matchingRouteIndex;
+              : routeMatch;
+            const hasChildren = link.children?.length;
             return (
               <li key={`${link.href}-${link.label}`}>
-                <Link
-                  href={link.href}
-                  onClick={onNavigate}
-                  tabIndex={open ? 0 : -1}
-                  aria-current={active ? "page" : undefined}
-                  className={cx(
-                    "flex items-center justify-between border-b border-hair py-3.5 text-[15px] font-semibold transition-colors duration-200",
-                    active ? "text-brand" : "text-head hover:text-brand",
-                  )}
-                >
-                  {link.label}
-                  <ArrowRight size={16} aria-hidden="true" className="text-dim" />
-                </Link>
+                {hasChildren ? (
+                  <>
+                    <button
+                      type="button"
+                      onClick={() => setAboutOpen((value) => !value)}
+                      aria-expanded={aboutOpen}
+                      className={cx(
+                        "flex w-full items-center justify-between border-b border-hair py-3.5 text-left text-[15px] font-semibold transition-colors duration-200",
+                        active ? "text-brand" : "text-head hover:text-brand",
+                      )}
+                    >
+                      {link.label}
+                      <ChevronDown size={17} className={cx("text-dim transition-transform", aboutOpen && "rotate-180")} />
+                    </button>
+                    {aboutOpen && (
+                      <ul className="border-b border-hair py-1 pl-4">
+                        {link.children.map((child) => (
+                          <li key={child.href}>
+                            <Link
+                              href={child.href}
+                              onClick={onNavigate}
+                              tabIndex={open ? 0 : -1}
+                              className="flex items-center justify-between py-3 text-sm font-medium text-dim transition-colors hover:text-brand"
+                            >
+                              {child.label}
+                              <ArrowRight size={15} aria-hidden="true" />
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </>
+                ) : (
+                  <Link
+                    href={link.href}
+                    onClick={onNavigate}
+                    tabIndex={open ? 0 : -1}
+                    aria-current={active ? "page" : undefined}
+                    className={cx(
+                      "flex items-center justify-between border-b border-hair py-3.5 text-[15px] font-semibold tracking-[0.01em] transition-colors duration-200",
+                      active ? "text-brand" : "text-head hover:text-brand",
+                    )}
+                  >
+                    {link.label}
+                    <ArrowRight size={16} aria-hidden="true" className="text-dim" />
+                  </Link>
+                )}
               </li>
             );
           })}

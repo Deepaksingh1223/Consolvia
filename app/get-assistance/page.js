@@ -38,8 +38,8 @@ export default function GetAssistancePage() {
   return (
     <>
       <PageHero
-        breadcrumb="Get Assistance"
-        eyebrow="Assistance Request"
+        breadcrumb="Process to Apply"
+        eyebrow="Process to Apply"
         title="Tell Us How We Can Help"
         highlight="How We Can Help"
         description="Share a few details about your loans and current repayment position. The more accurate the information, the more useful our guidance will be."
