@@ -29,4 +29,4 @@ for (const file of readdirSync(dir)) {
   writeFileSync(path, html);
   count += 1;
 }
-console.log(`prepared ${count} html files in ${dir}`);
+

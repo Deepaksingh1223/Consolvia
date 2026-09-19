@@ -48,4 +48,4 @@ for (const file of files) {
     changed += 1;
   }
 }
-console.log(`rewrote ${changed}/${files.length} files`);
+
