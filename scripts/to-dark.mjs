@@ -6,7 +6,6 @@ const files = execSync("rg --files -g '*.js' -g '*.jsx' app components", { encod
   .split("\n")
   .filter((f) => !f.includes("app/api/"));
 
-// Specific rewrites first (longest / most specific), then bare token swaps.
 const specific = [
   ["bg-white/85", "bg-base/85"],
   ["bg-white/90", "bg-base/90"],
@@ -48,4 +47,4 @@ for (const file of files) {
     changed += 1;
   }
 }
-console.log(`rewrote ${changed}/${files.length} files`);
+
