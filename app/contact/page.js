@@ -57,8 +57,8 @@ export default function ContactPage() {
         meta={[
           { term: "Working Hours", detail: "Mon–Sat, 10 AM – 7 PM IST" },
           { term: "Response", detail: "Usually within 1 working day" },
-          { term: "Email", detail: "support@consolviaprime.com" },
-          { term: "Phone", detail: "+91 00000 00000" },
+          { term: "Email", detail: SITE.email },
+          { term: "Phone", detail: SITE.phone },
         ]}
       />
 
