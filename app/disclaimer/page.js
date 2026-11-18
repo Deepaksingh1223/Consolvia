@@ -1,5 +1,5 @@
 import LegalLayout from "@/components/LegalLayout";
-import { DISCLAIMER, SITE } from "@/lib/constants";
+import { BANK_DETAILS, DISCLAIMER, PAYMENT_DISCLAIMER, SITE } from "@/lib/constants";
 
 export const metadata = {
   title: "Disclaimer",
@@ -16,7 +16,7 @@ const SECTIONS = [
   {
     heading: "No Regulatory Affiliation",
     paragraphs: [
-      `${SITE.legalName} is not a bank, non-banking financial company, lender, credit bureau or recovery agency. We are not approved, certified, endorsed or authorised by the Reserve Bank of India, any other regulator, or any government body, and we make no such claim.`,
+      `${SITE.legalName} is not a bank, non-banking financial company, lender, credit bureau, recovery agency or government body, and is not affiliated with any regulator or government body. Services requiring specific regulatory authorisation are offered only where appropriately authorised.`,
     ],
   },
   {
@@ -38,13 +38,22 @@ const SECTIONS = [
     heading: "Credit Record Implications",
     paragraphs: [
       "Any repayment arrangement, delay or settlement may be reported by your lender to credit bureaus in accordance with applicable norms, and may affect your credit record. Decisions on such reporting rest with your lender.",
-      "[Insert any additional disclosures required in relation to credit reporting.]",
     ],
   },
   {
     heading: "Payments to Lenders",
     paragraphs: [
       "All repayments must be made directly to your lender through their official channels. We do not accept, collect or hold repayment amounts on behalf of any lender.",
+    ],
+  },
+  {
+    heading: "Payments to Us",
+    paragraphs: [PAYMENT_DISCLAIMER],
+    list: [
+      `Account holder: ${BANK_DETAILS.accountHolder}`,
+      `Account number: ${BANK_DETAILS.accountNumber}`,
+      `IFSC: ${BANK_DETAILS.ifsc} · SWIFT: ${BANK_DETAILS.swift}`,
+      `Bank: ${BANK_DETAILS.bankName}, ${BANK_DETAILS.branch}`,
     ],
   },
   {

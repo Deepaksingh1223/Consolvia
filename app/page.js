@@ -1,4 +1,5 @@
 import HeroSection from "@/components/HeroSection";
+import PaymentBanner from "@/components/PaymentBanner";
 import TrustBar from "@/components/TrustBar";
 import Marquee from "@/components/Marquee";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -27,6 +28,7 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
+      <PaymentBanner />
       <TrustBar />
       <Marquee />
       <ProblemSection />
@@ -35,16 +37,38 @@ export default function HomePage() {
       <WhyChooseUs />
       <LoanTypesSection />
       <TestimonialsSection />
-      <CTASection
-        title="Start With a Simple Conversation"
-        description="Tell us about your situation and understand the possible next steps."
-      />
+      <section className="section-y bg-elev">
+        <div className="container-x grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-16">
+          <Reveal axis="left">
+            <SectionHeading
+              index="07"
+              eyebrow="Our Commitment to Customers"
+              title="Clear Information. Responsible Guidance."
+              highlight="Responsible Guidance"
+              description="At Consolvia Prime, we believe that informed decisions begin with clear information and responsible guidance."
+            />
+          </Reveal>
+          <Reveal delay={100}>
+            <div className="card-base space-y-5 p-7 md:p-8">
+              <p className="text-[15px] leading-relaxed">
+                We are committed to understanding each customer&apos;s circumstances, explaining
+                available options, maintaining professional communication and providing structured
+                support throughout the consulting engagement.
+              </p>
+              <p className="border-t border-hair pt-5 text-[15px] leading-relaxed text-head">
+                Our objective is to help customers approach financial challenges with greater
+                clarity, confidence and a practical plan of action.
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
 
       <section className="border-t border-hair bg-panel section-y">
         <div className="container-x grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <Reveal axis="left">
             <SectionHeading
-              index="07"
+              index="08"
               eyebrow="FAQs"
               title="Questions People Ask Us First"
               highlight="Questions"
@@ -57,6 +81,12 @@ export default function HomePage() {
           </Reveal>
         </div>
       </section>
+
+      <CTASection
+        title="Let's Work Towards a Clearer Financial Future."
+        description="Whether you need assistance organising your debts, navigating financial hardship or improving your business processes, Consolvia Prime is ready to understand your requirements and help you explore practical next steps. Get in touch with our team to begin your consulting journey."
+        secondary={{ label: "Contact Us", href: "/contact" }}
+      />
 
       <section className="bg-elev py-16 md:py-20">
         <div className="container-x">

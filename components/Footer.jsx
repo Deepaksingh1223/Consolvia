@@ -117,6 +117,9 @@ export default function Footer() {
 
         <div className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-7 text-[13px] text-white/45 sm:flex-row sm:items-center sm:justify-between">
           <p>&copy; 2026 {SITE.name}. All Rights Reserved.</p>
+          <p className="tracking-[0.02em] text-white/40">
+            CIN: {SITE.cin} &nbsp;·&nbsp; GSTIN: {SITE.gstin}
+          </p>
           <p className="tracking-[0.02em] text-white/40">{SITE.domain}</p>
         </div>
       </div>

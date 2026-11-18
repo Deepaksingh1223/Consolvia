@@ -21,8 +21,10 @@ export default function Reveal({
     const node = ref.current;
     if (!node) return;
 
+    const reveal = () => node.classList.add("is-visible");
+
     if (typeof IntersectionObserver === "undefined") {
-      node.classList.add("is-visible");
+      reveal();
       return;
     }
 
@@ -30,16 +32,30 @@ export default function Reveal({
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
+            reveal();
             observer.unobserve(entry.target);
           }
         });
       },
-      { rootMargin: "0px 0px -12% 0px", threshold: 0.12 },
+      { rootMargin: "0px 0px -10% 0px", threshold: 0 },
     );
 
     observer.observe(node);
-    return () => observer.disconnect();
+
+    // Failsafe for environments where IO callbacks never arrive:
+    // reveal anything that is in or near the viewport.
+    const timer = window.setInterval(() => {
+      const rect = node.getBoundingClientRect();
+      if (rect.top < window.innerHeight + 120 && rect.bottom > 0) {
+        reveal();
+        window.clearInterval(timer);
+      }
+    }, 400);
+
+    return () => {
+      observer.disconnect();
+      window.clearInterval(timer);
+    };
   }, []);
 
   return (

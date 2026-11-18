@@ -7,7 +7,7 @@ import { FAQ_CATEGORIES } from "@/lib/constants";
 export const metadata = {
   title: "FAQs",
   description:
-    "Answers about loan repayment assistance, settlement processes, documents, charges, privacy and the assistance process at Consolvia Prime.",
+    "Answers about Consolvia Prime services, financial hardship assistance, lender decisions, credit profiles, documents and charges.",
   alternates: { canonical: "/faq" },
   openGraph: {
     title: "FAQs | Consolvia Prime",
@@ -74,8 +74,8 @@ export default function FaqPage() {
 
       <CTASection
         eyebrow="Still Unsure?"
-        title="Ask Us About Your Specific Case"
-        description="General answers only go so far. Share your details and we will respond to your actual situation."
+        title="Let's Work Towards a Clearer Financial Future."
+        description="Whether you need assistance organising your debts, navigating financial hardship or improving your business processes, Consolvia Prime is ready to understand your requirements and help you explore practical next steps. Get in touch with our team to begin your consulting journey."
         secondary={{ label: "Contact Us", href: "/contact" }}
       />
     </>
